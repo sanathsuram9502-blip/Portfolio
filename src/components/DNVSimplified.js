@@ -112,12 +112,12 @@ const DNVSimplified = ({ onBack }) => {
               <div className="wireframes-grid">
                 <div className="wireframe-item">
                   <div className="wireframe-image" onClick={() => setLightboxImage({
-                    src: "/images/dnv-case-study/wireframes/wireframe_dnv_healthcare_homepage.png",
+                    src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/wireframes/wireframe_dnv_healthcare_homepage.png',
                     alt: "DNV Healthcare Homepage Wireframe",
                     title: "Homepage & Navigation"
                   })}>
                     <img 
-                      src="/images/dnv-case-study/wireframes/wireframe_dnv_healthcare_homepage.png" 
+                      src=(process.env.PUBLIC_URL || '') + '/images/dnv-case-study/wireframes/wireframe_dnv_healthcare_homepage.png" 
                       alt="DNV Healthcare Homepage Wireframe"
                       onError={(e) => {
                         e.target.style.display = 'none';
@@ -139,12 +139,12 @@ const DNVSimplified = ({ onBack }) => {
 
                 <div className="wireframe-item">
                   <div className="wireframe-image" onClick={() => setLightboxImage({
-                    src: "/images/dnv-case-study/wireframes/wireframe_dnv_quote_request_form.png",
+                    src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/wireframes/wireframe_dnv_quote_request_form.png',
                     alt: "Quote Request Form Wireframe",
                     title: "Quote Request Flow"
                   })}>
                     <img 
-                      src="/images/dnv-case-study/wireframes/wireframe_dnv_quote_request_form.png" 
+                      src=(process.env.PUBLIC_URL || '') + '/images/dnv-case-study/wireframes/wireframe_dnv_quote_request_form.png" 
                       alt="Quote Request Form Wireframe"
                       onError={(e) => {
                         e.target.style.display = 'none';
@@ -166,12 +166,12 @@ const DNVSimplified = ({ onBack }) => {
 
                 <div className="wireframe-item">
                   <div className="wireframe-image" onClick={() => setLightboxImage({
-                    src: "/images/dnv-case-study/final-designs/Login-Hospital Login.png",
+                    src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/Login-Hospital Login.png',
                     alt: "Hospital Login Interface",
                     title: "Authentication Portal"
                   })}>
                     <img 
-                      src="/images/dnv-case-study/final-designs/Login-Hospital Login.png" 
+                      src=(process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/Login-Hospital Login.png" 
                       alt="Hospital Login Interface"
                       onError={(e) => {
                         e.target.style.display = 'none';
@@ -193,12 +193,12 @@ const DNVSimplified = ({ onBack }) => {
 
                 <div className="wireframe-item">
                   <div className="wireframe-image" onClick={() => setLightboxImage({
-                    src: "/images/dnv-case-study/final-designs/New or Existing.png",
+                    src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/New or Existing.png',
                     alt: "User Path Selection Interface",
                     title: "User Journey Selection"
                   })}>
                     <img 
-                      src="/images/dnv-case-study/final-designs/New or Existing.png" 
+                      src=(process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/New or Existing.png" 
                       alt="User Path Selection Interface"
                       onError={(e) => {
                         e.target.style.display = 'none';
@@ -220,12 +220,12 @@ const DNVSimplified = ({ onBack }) => {
 
                 <div className="wireframe-item">
                   <div className="wireframe-image" onClick={() => setLightboxImage({
-                    src: "/images/dnv-case-study/final-designs/New DNV Quote Request.png",
+                    src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/New DNV Quote Request.png',
                     alt: "DNV Quote Request Interface",
                     title: "Quote Request Form"
                   })}>
                     <img 
-                      src="/images/dnv-case-study/final-designs/New DNV Quote Request.png" 
+                      src=(process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/New DNV Quote Request.png" 
                       alt="DNV Quote Request Interface"
                       onError={(e) => {
                         e.target.style.display = 'none';
@@ -247,12 +247,12 @@ const DNVSimplified = ({ onBack }) => {
 
                 <div className="wireframe-item">
                   <div className="wireframe-image" onClick={() => setLightboxImage({
-                    src: "/images/dnv-case-study/final-designs/Initial Page.png",
+                    src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/Initial Page.png',
                     alt: "Dashboard Initial Page",
                     title: "Dashboard Overview"
                   })}>
                     <img 
-                      src="/images/dnv-case-study/final-designs/Initial Page.png" 
+                      src=(process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/Initial Page.png" 
                       alt="Dashboard Initial Page"
                       onError={(e) => {
                         e.target.style.display = 'none';
@@ -274,12 +274,12 @@ const DNVSimplified = ({ onBack }) => {
 
                 <div className="wireframe-item">
                   <div className="wireframe-image" onClick={() => setLightboxImage({
-                    src: "/images/dnv-case-study/final-designs/Hospital Profile - Organization Information.png",
+                    src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/Hospital Profile - Organization Information.png',
                     alt: "Hospital Organization Profile",
                     title: "Organization Management"
                   })}>
                     <img 
-                      src="/images/dnv-case-study/final-designs/Hospital Profile - Organization Information.png" 
+                      src=(process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/Hospital Profile - Organization Information.png" 
                       alt="Hospital Organization Profile"
                       onError={(e) => {
                         e.target.style.display = 'none';
@@ -301,12 +301,12 @@ const DNVSimplified = ({ onBack }) => {
 
                 <div className="wireframe-item">
                   <div className="wireframe-image" onClick={() => setLightboxImage({
-                    src: "/images/dnv-case-study/final-designs/analysis.png",
+                    src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/analysis.png',
                     alt: "Analytics and Reporting Interface",
                     title: "Analytics & Reporting"
                   })}>
                     <img 
-                      src="/images/dnv-case-study/final-designs/analysis.png" 
+                      src=(process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/analysis.png" 
                       alt="Analytics and Reporting Interface"
                       onError={(e) => {
                         e.target.style.display = 'none';

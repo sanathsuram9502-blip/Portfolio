@@ -298,7 +298,7 @@ const UniServeReachCaseStudy = ({ onBack }) => {
                                 flexShrink: 0
                             }}>
                                 <img
-                                    src="/images/uniserve-case-study/persona1.png"
+                                    src={(process.env.PUBLIC_URL || '') + '/images/uniserve-case-study/persona1.png'}
                                     alt="Alex Chen"
                                     style={{
                                         width: '100%',
@@ -354,7 +354,7 @@ const UniServeReachCaseStudy = ({ onBack }) => {
                                 flexShrink: 0
                             }}>
                                 <img
-                                    src="/images/uniserve-case-study/persona2.png"
+                                    src={(process.env.PUBLIC_URL || '') + '/images/uniserve-case-study/persona2.png'}
                                     alt="Sarah Rodriguez"
                                     style={{
                                         width: '100%',
@@ -428,7 +428,7 @@ const UniServeReachCaseStudy = ({ onBack }) => {
                                 boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
                             }}>
                                 <img
-                                    src="/images/uniserve-case-study/card.png"
+                                    src={(process.env.PUBLIC_URL || '') + '/images/uniserve-case-study/card.png'}
                                     alt="Card-based metric display"
                                     style={{
                                         width: '100%',
@@ -462,7 +462,7 @@ const UniServeReachCaseStudy = ({ onBack }) => {
                                 boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
                             }}>
                                 <img
-                                    src="/images/uniserve-case-study/nav-tab.png"
+                                    src={(process.env.PUBLIC_URL || '') + '/images/uniserve-case-study/nav-tab.png'}
                                     alt="Tabbed navigation structure"
                                     style={{
                                         width: '100%',
@@ -496,7 +496,7 @@ const UniServeReachCaseStudy = ({ onBack }) => {
                                 boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
                             }}>
                                 <img
-                                    src="/images/uniserve-case-study/pie-chart.png"
+                                    src={(process.env.PUBLIC_URL || '') + '/images/uniserve-case-study/pie-chart.png'}
                                     alt="Dual pie chart analysis"
                                     style={{
                                         width: '100%',
@@ -524,17 +524,17 @@ const UniServeReachCaseStudy = ({ onBack }) => {
                 }}>
                     {[
                         {
-                            src: "/images/uniserve-case-study/Channel.png",
+                            src: (process.env.PUBLIC_URL || '') + '/images/uniserve-case-study/Channel.png',
                             title: "Channel Overview Dashboard",
                             desc: "Main dashboard showing Email, SMS, and WhatsApp performance metrics with real-time data updates and comparative analysis capabilities."
                         },
                         {
-                            src: "/images/uniserve-case-study/Channel-1.png",
+                            src: (process.env.PUBLIC_URL || '') + '/images/uniserve-case-study/Channel-1.png',
                             title: "Detailed Channel Analysis",
                             desc: "Drill-down view with granular performance tables, source system breakdown, and detailed metrics for technical operations teams."
                         },
                         {
-                            src: "/images/uniserve-case-study/Channel_success.png",
+                            src: (process.env.PUBLIC_URL || '') + '/images/uniserve-case-study/Channel_success.png',
                             title: "Success Metrics Focus",
                             desc: "Comprehensive success rate analysis with CHUB performance indicators, load distribution charts, and system health monitoring."
                         }

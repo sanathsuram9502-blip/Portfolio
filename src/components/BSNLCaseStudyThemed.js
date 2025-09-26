@@ -4,6 +4,9 @@ import { useTheme } from '../context/ThemeContext';
 const BSNLCaseStudyThemed = ({ onBack }) => {
     const { isDarkMode } = useTheme();
 
+    // Get the base URL for images
+    const baseImageUrl = (process.env.PUBLIC_URL || '') + '/images';
+
     const getThemedStyles = () => {
         return {
             container: {
@@ -301,42 +304,42 @@ const BSNLCaseStudyThemed = ({ onBack }) => {
                 }}>
                     {[
                         {
-                            src: "/images/bsnl-case-study/old_screens/login.png",
+                            src: baseImageUrl + '/bsnl-case-study/old_screens/login.png',
                             // title: "Original Home Screen",
                             // desc: "Cluttered interface with poor visual hierarchy and confusing navigation"
                         },
                         {
-                            src: "/images/bsnl-case-study/old_screens/step1.png",
+                            src: baseImageUrl + '/bsnl-case-study/old_screens/step1.png',
                             // title: "Original Home Screen",
                             // desc: "Cluttered interface with poor visual hierarchy and confusing navigation"
                         },
                         {
-                            src: "/images/bsnl-case-study/old_screens/step2.png",
+                            src: baseImageUrl + '/bsnl-case-study/old_screens/step2.png',
                             // title: "Original Home Screen",
                             // desc: "Cluttered interface with poor visual hierarchy and confusing navigation"
                         },
                         {
-                            src: "/images/bsnl-case-study/old_screens/step3.png",
+                            src: baseImageUrl + '/bsnl-case-study/old_screens/step3.png',
                             // title: "Original Home Screen",
                             // desc: "Cluttered interface with poor visual hierarchy and confusing navigation"
                         },
                         {
-                            src: "/images/bsnl-case-study/old_screens/step3-2.png",
+                            src: baseImageUrl + '/bsnl-case-study/old_screens/step3-2.png',
                             // title: "Original Home Screen",
                             // desc: "Cluttered interface with poor visual hierarchy and confusing navigation"
                         },
                         {
-                            src: "/images/bsnl-case-study/old_screens/step4.png",
+                            src: baseImageUrl + '/bsnl-case-study/old_screens/step4.png',
                             // title: "Original Home Screen",
                             // desc: "Cluttered interface with poor visual hierarchy and confusing navigation"
                         },
                         {
-                            src: "/images/bsnl-case-study/old_screens/Declaration.png",
+                            src: baseImageUrl + '/bsnl-case-study/old_screens/Declaration.png',
                             // title: "Original Home Screen",
                             // desc: "Cluttered interface with poor visual hierarchy and confusing navigation"
                         },
                         {
-                            src: "/images/bsnl-case-study/old_screens/Declaration-success.png",
+                            src: baseImageUrl + '/bsnl-case-study/old_screens/Declaration-success.png',
                             // title: "Original Home Screen",
                             // desc: "Cluttered interface with poor visual hierarchy and confusing navigation"
                         },
@@ -398,12 +401,12 @@ const BSNLCaseStudyThemed = ({ onBack }) => {
                 }}>
                     {[
                         {
-                            src: "/images/bsnl-case-study/SWOT_analysis/airtel.jpg",
+                            src: baseImageUrl + '/bsnl-case-study/SWOT_analysis/airtel.jpg',
                             // title: "Primary Color Palette",
                             // desc: "Main brand colors and their variations for consistent visual identity"
                         },
                         {
-                            src: "/images/bsnl-case-study/SWOT_analysis/jio.jpg",
+                            src: baseImageUrl + '/bsnl-case-study/SWOT_analysis/jio.jpg',
                             // title: "Secondary Colors",
                             // desc: "Supporting colors for accents, states, and UI elements"
                         }
@@ -466,22 +469,22 @@ const BSNLCaseStudyThemed = ({ onBack }) => {
                 }}>
                     {[
                         {
-                            src: "/images/bsnl-case-study/colors/1.png",
+                            src: baseImageUrl + '/bsnl-case-study/colors/1.png',
                             title: "Primary Color Palette",
                             // desc: "Main brand colors and their variations for consistent visual identity"
                         },
                         {
-                            src: "/images/bsnl-case-study/colors/2.png",
+                            src: baseImageUrl + '/bsnl-case-study/colors/2.png',
                             title: "Secondary Colors",
                             // desc: "Supporting colors for accents, states, and UI elements"
                         },
                         {
-                            src: "/images/bsnl-case-study/colors/3.png",
+                            src: baseImageUrl + '/bsnl-case-study/colors/3.png',
                             title: "Color Usage Guidelines",
                             // desc: "Accessibility-compliant color combinations and usage patterns"
                         },
                         {
-                            src: "/images/bsnl-case-study/colors/4.png",
+                            src: baseImageUrl + '/bsnl-case-study/colors/4.png',
                             title: "Interactive States",
                             // desc: "Color variations for buttons, links, and interactive elements"
                         }
@@ -543,22 +546,22 @@ const BSNLCaseStudyThemed = ({ onBack }) => {
                 }}>
                     {[
                         {
-                            src: "/images/bsnl-case-study/components/Radio_option.png",
+                            src: baseImageUrl + '/bsnl-case-study/components/Radio_option.png',
                             // title: "Secondary Colors",
                             // desc: "Supporting colors for accents, states, and UI elements"
                         },
                         {
-                            src: "/images/bsnl-case-study/components/Day.png",
+                            src: baseImageUrl + '/bsnl-case-study/components/Day.png',
                             // title: "Primary Color Palette",
                             // desc: "Main brand colors and their variations for consistent visual identity"
                         },
                         {
-                            src: "/images/bsnl-case-study/components/Month.png",
+                            src: baseImageUrl + '/bsnl-case-study/components/Month.png',
                             // title: "Secondary Colors",
                             // desc: "Supporting colors for accents, states, and UI elements"
                         },
                         {
-                            src: "/images/bsnl-case-study/components/Year.png",
+                            src: baseImageUrl + '/bsnl-case-study/components/Year.png',
                             // title: "Secondary Colors",
                             // desc: "Supporting colors for accents, states, and UI elements"
                         },
@@ -622,7 +625,7 @@ const BSNLCaseStudyThemed = ({ onBack }) => {
                 }}>
                     {[
                         {
-                            src: "/images/bsnl-case-study/components/typography.png",
+                            src: baseImageUrl + '/bsnl-case-study/components/typography.png',
                             // title: "Secondary Colors",
                             // desc: "Supporting colors for accents, states, and UI elements"
                         },
@@ -685,42 +688,42 @@ const BSNLCaseStudyThemed = ({ onBack }) => {
                 }}>
                     {[
                         {
-                            src: "/images/bsnl-case-study/new_screens/Login-screen.png",
+                            src: baseImageUrl + '/bsnl-case-study/new_screens/Login-screen.png',
                             title: "Modern Login Screen",
                             desc: "Clean, user-friendly login interface with simplified authentication process"
                         },
                         {
-                            src: "/images/bsnl-case-study/new_screens/Main-screen.png",
+                            src: baseImageUrl + '/bsnl-case-study/new_screens/Main-screen.png',
                             title: "Redesigned Home Screen",
                             desc: "Simplified dashboard with clear visual hierarchy and easy access to key features"
                         },
                         {
-                            src: "/images/bsnl-case-study/new_screens/New-connection.png",
+                            src: baseImageUrl + '/bsnl-case-study/new_screens/New-connection.png',
                             title: "New Connection Flow",
                             desc: "Streamlined onboarding process with guided steps for new service activation"
                         },
                         {
-                            src: "/images/bsnl-case-study/new_screens/Number-verification.png",
+                            src: baseImageUrl + '/bsnl-case-study/new_screens/Number-verification.png',
                             title: "Number Verification",
                             desc: "Secure and intuitive phone number verification process"
                         },
                         {
-                            src: "/images/bsnl-case-study/new_screens/SIM-allotment.png",
+                            src: baseImageUrl + '/bsnl-case-study/new_screens/SIM-allotment.png',
                             title: "SIM Allotment Interface",
                             desc: "Clear SIM allocation process with progress tracking and confirmation"
                         },
                         {
-                            src: "/images/bsnl-case-study/new_screens/Declaration.png",
+                            src: baseImageUrl + '/bsnl-case-study/new_screens/Declaration.png',
                             title: "Declaration Screen",
                             desc: "Simplified terms and declaration interface with clear acceptance flow"
                         },
                         {
-                            src: "/images/bsnl-case-study/new_screens/Attachment.png",
+                            src: baseImageUrl + '/bsnl-case-study/new_screens/Attachment.png',
                             title: "Document Upload",
                             desc: "User-friendly document attachment interface with clear guidelines"
                         },
                         {
-                            src: "/images/bsnl-case-study/new_screens/Loading.png",
+                            src: baseImageUrl + '/bsnl-case-study/new_screens/Loading.png',
                             title: "Loading States",
                             desc: "Engaging loading animations that provide clear progress feedback to users"
                         }
@@ -785,32 +788,32 @@ const BSNLCaseStudyThemed = ({ onBack }) => {
                     }}>
                         {[
                             {
-                                src: "/images/bsnl-case-study/wireframes/login-screen.png",
+                                src: baseImageUrl + '/bsnl-case-study/wireframes/login-screen.png',
                                 // title: "Login Screen Wireframe",
                                 // desc: "Initial wireframe design for the login page"
                             },
                             {
-                                src: "/images/bsnl-case-study/wireframes/Number-verification.png",
+                                src: baseImageUrl + '/bsnl-case-study/wireframes/Number-verification.png',
                                 // title: "Account Screen Wireframe",
                                 // desc: "User account management wireframe"
                             },
                             {
-                                src: "/images/bsnl-case-study/wireframes/New-connection.png",
+                                src: baseImageUrl + '/bsnl-case-study/wireframes/New-connection.png',
                                 // title: "Payments Screen Wireframe",
                                 // desc: "Bill payment flow wireframe"
                             },
                             {
-                                src: "/images/bsnl-case-study/wireframes/Sim-allotment.png",
+                                src: baseImageUrl + '/bsnl-case-study/wireframes/Sim-allotment.png',
                                 // title: "Services Screen Wireframe",
                                 // desc: "Service management wireframe"
                             },
                             {
-                                src: "/images/bsnl-case-study/wireframes/Attachment.png",
+                                src: baseImageUrl + '/bsnl-case-study/wireframes/Attachment.png',
                                 // title: "Services Screen Wireframe",
                                 // desc: "Service management wireframe"
                             },
                             {
-                                src: "/images/bsnl-case-study/wireframes/Declaration.png",
+                                src: baseImageUrl + '/bsnl-case-study/wireframes/Declaration.png',
                                 // title: "Services Screen Wireframe",
                                 // desc: "Service management wireframe"
                             }
@@ -872,57 +875,57 @@ const BSNLCaseStudyThemed = ({ onBack }) => {
                     }}>
                         {[
                             {
-                                src: "/images/bsnl-case-study/new_screens/Login-screen.png",
+                                src: baseImageUrl + '/bsnl-case-study/new_screens/Login-screen.png',
                                 // title: "Modern Login Screen",
                                 // desc: "Clean, user-friendly login interface with simplified authentication process"
                             },
                             {
-                                src: "/images/bsnl-case-study/new_screens/dashboard.png",
+                                src: baseImageUrl + '/bsnl-case-study/new_screens/dashboard.png',
                                 // title: "Modern Login Screen",
                                 // desc: "Clean, user-friendly login interface with simplified authentication process"
                             },
                             {
-                                src: "/images/bsnl-case-study/new_screens/Number-verification.png",
+                                src: baseImageUrl + '/bsnl-case-study/new_screens/Number-verification.png',
                                 // title: "Modern Login Screen",
                                 // desc: "Clean, user-friendly login interface with simplified authentication process"
                             },
                             {
-                                src: "/images/bsnl-case-study/new_screens/step0.png",
+                                src: baseImageUrl + '/bsnl-case-study/new_screens/step0.png',
                                 // title: "Redesigned Home Screen",
                                 // desc: "Simplified dashboard with clear visual hierarchy and easy access to key features"
                             },
                             {
-                                src: "/images/bsnl-case-study/new_screens/step1.png",
+                                src: baseImageUrl + '/bsnl-case-study/new_screens/step1.png',
                                 // title: "New Connection Flow",
                                 // desc: "Streamlined onboarding process with guided steps for new service activation"
                             },
                             {
-                                src: "/images/bsnl-case-study/new_screens/step2.png",
+                                src: baseImageUrl + '/bsnl-case-study/new_screens/step2.png',
                                 // title: "Number Verification",
                                 // desc: "Secure and intuitive phone number verification process"
                             },
                             {
-                                src: "/images/bsnl-case-study/new_screens/step3.png",
+                                src: baseImageUrl + '/bsnl-case-study/new_screens/step3.png',
                                 // title: "Loading States",
                                 // desc: "Engaging loading animations that provide clear progress feedback to users"
                             },
                             {
-                                src: "/images/bsnl-case-study/new_screens/step3-2.png",
+                                src: baseImageUrl + '/bsnl-case-study/new_screens/step3-2.png',
                                 // title: "SIM Allotment Interface",
                                 // desc: "Clear SIM allocation process with progress tracking and confirmation"
                             },
                             {
-                                src: "/images/bsnl-case-study/new_screens/step4.png",
+                                src: baseImageUrl + '/bsnl-case-study/new_screens/step4.png',
                                 // title: "Declaration Screen",
                                 // desc: "Simplified terms and declaration interface with clear acceptance flow"
                             },
                             {
-                                src: "/images/bsnl-case-study/new_screens/Declaration.png",
+                                src: baseImageUrl + '/bsnl-case-study/new_screens/Declaration.png',
                                 // title: "Document Upload",
                                 // desc: "User-friendly document attachment interface with clear guidelines"
                             },
                             {
-                                src: "/images/bsnl-case-study/new_screens/Declaration-success.png",
+                                src: baseImageUrl + '/bsnl-case-study/new_screens/Declaration-success.png',
                                 // title: "Document Upload",
                                 // desc: "User-friendly document attachment interface with clear guidelines"
                             },
@@ -994,7 +997,7 @@ const BSNLCaseStudyThemed = ({ onBack }) => {
                                 height: 'auto'
                             }}
                         >
-                            <source src="/images/bsnl-case-study/new_screens/prototype.mp4" type="video/mp4" />
+                            <source src={baseImageUrl + '/bsnl-case-study/new_screens/prototype.mp4'} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </div>

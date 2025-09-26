@@ -12,11 +12,14 @@ const BSNLCaseStudy = ({ onBack }) => {
 
   const [lightboxImage, setLightboxImage] = useState(null);
 
+  // Get the base URL for images
+  const baseImageUrl = (process.env.PUBLIC_URL || '') + '/images';
+
   const projectDetails = {
     title: "BSNL App Redesign",
     subtitle: "Comprehensive Mobile Application UX/UI Redesign",
     duration: "6 months",
-    role: "Lead UX/UI Designer",
+    role: "UX/UI Designer",
     team: "4 designers, 3 developers",
     overview: "This project involved a comprehensive redesign of the existing BSNL mobile application, focusing on enhancing user experience (UX) and user interface (UI) to create a more intuitive, efficient, and visually appealing platform for managing mobile services. The goal was to address common user frustrations with legacy telecom apps, such as cluttered interfaces, difficult navigation, and lack of clarity, by implementing a modern design language and streamlining core functionalities.",
     problem: "The existing BSNL mobile app suffered from poor user experience with cluttered interfaces, confusing navigation, and outdated design patterns that frustrated users trying to manage their telecom services efficiently.",
@@ -100,25 +103,25 @@ const BSNLCaseStudy = ({ onBack }) => {
 
   const wireframeImages = [
     {
-      src: "/images/bsnl-case-study/BSNL App Home Screen Wireframe.png",
+      src: baseImageUrl + '/bsnl-case-study/BSNL App Home Screen Wireframe.png',
       alt: "BSNL App Home Screen Wireframe",
       title: "Home Screen Wireframe",
       description: "Initial wireframe design for the main dashboard"
     },
     {
-      src: "/images/bsnl-case-study/BSNL App Account Screen Wireframe.png",
+      src: baseImageUrl + '/bsnl-case-study/BSNL App Account Screen Wireframe.png',
       alt: "BSNL App Account Screen Wireframe", 
       title: "Account Screen Wireframe",
       description: "User account management wireframe"
     },
     {
-      src: "/images/bsnl-case-study/BSNL App Payments Screen Wireframe.png",
+      src: baseImageUrl + '/bsnl-case-study/BSNL App Payments Screen Wireframe.png',
       alt: "BSNL App Payments Screen Wireframe",
       title: "Payments Screen Wireframe", 
       description: "Bill payment flow wireframe"
     },
     {
-      src: "/images/bsnl-case-study/BSNL App Services Screen Wireframe.png",
+      src: baseImageUrl + '/bsnl-case-study/BSNL App Services Screen Wireframe.png',
       alt: "BSNL App Services Screen Wireframe",
       title: "Services Screen Wireframe",
       description: "Service management wireframe"
@@ -127,25 +130,25 @@ const BSNLCaseStudy = ({ onBack }) => {
 
   const finalDesignImages = [
     {
-      src: "/images/bsnl-case-study/BSNL App Home Screen Hi-Fi Design.png",
+      src: baseImageUrl + '/bsnl-case-study/BSNL App Home Screen Hi-Fi Design.png',
       alt: "BSNL App Home Screen Hi-Fi Design",
       title: "Home Screen Design",
       description: "Final high-fidelity home screen design with modern UI"
     },
     {
-      src: "/images/bsnl-case-study/BSNL App Account Screen Hi-Fi Design.png",
+      src: baseImageUrl + '/bsnl-case-study/BSNL App Account Screen Hi-Fi Design.png',
       alt: "BSNL App Account Screen Hi-Fi Design",
       title: "Account Screen Design", 
       description: "Clean account management interface"
     },
     {
-      src: "/images/bsnl-case-study/BSNL App Payments Screen Hi-Fi Design.png",
+      src: baseImageUrl + '/bsnl-case-study/BSNL App Payments Screen Hi-Fi Design.png',
       alt: "BSNL App Payments Screen Hi-Fi Design",
       title: "Payments Screen Design",
       description: "Streamlined payment experience"
     },
     {
-      src: "/images/bsnl-case-study/BSNL App Services Screen Hi-Fi Design.png",
+      src: baseImageUrl + '/bsnl-case-study/BSNL App Services Screen Hi-Fi Design.png',
       alt: "BSNL App Services Screen Hi-Fi Design", 
       title: "Services Screen Design",
       description: "Organized service management interface"

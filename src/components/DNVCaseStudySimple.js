@@ -93,32 +93,32 @@ const DNVCaseStudySimple = ({ onBack }) => {
           }}>
             {[
               { 
-                src: "/images/dnv-case-study/wireframes/wireframe_dnv_healthcare_homepage.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/wireframes/wireframe_dnv_healthcare_homepage.png',
                 title: "Healthcare Homepage",
                 desc: "Main landing page wireframe showing key navigation and features"
               },
               { 
-                src: "/images/dnv-case-study/wireframes/wireframe_dnv_hospital_lookup_map.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/wireframes/wireframe_dnv_hospital_lookup_map.png',
                 title: "Hospital Lookup Map", 
                 desc: "Interactive map interface for finding healthcare facilities"
               },
               { 
-                src: "/images/dnv-case-study/wireframes/wireframe_dnv_hospital_profile.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/wireframes/wireframe_dnv_hospital_profile.png',
                 title: "Hospital Profile",
                 desc: "Detailed facility information and accreditation status"
               },
               { 
-                src: "/images/dnv-case-study/wireframes/wireframe_dnv_quote_request_form.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/wireframes/wireframe_dnv_quote_request_form.png',
                 title: "Quote Request Form",
                 desc: "Streamlined form for requesting accreditation quotes"
               },
               { 
-                src: "/images/dnv-case-study/wireframes/wireframe_clara_ai_assistant.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/wireframes/wireframe_clara_ai_assistant.png',
                 title: "AI Assistant Interface",
                 desc: "Clara AI helper for guiding users through processes"
               },
               { 
-                src: "/images/dnv-case-study/wireframes/image.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/wireframes/image.png',
                 title: "Additional Wireframe",
                 desc: "Supporting wireframe for complex user flows"
               }
@@ -194,27 +194,27 @@ const DNVCaseStudySimple = ({ onBack }) => {
           }}>
             {[
               { 
-                src: "/images/dnv-case-study/design-system/Color Palette.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/design-system/Color Palette.png',
                 title: "Color Palette",
                 desc: "Brand colors and accessibility-compliant color system"
               },
               { 
-                src: "/images/dnv-case-study/design-system/Typography.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/design-system/Typography.png',
                 title: "Typography System",
                 desc: "Hierarchical text styles for consistent communication"
               },
               { 
-                src: "/images/dnv-case-study/design-system/Button.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/design-system/Button.png',
                 title: "Button Components",
                 desc: "Interactive button states and variations"
               },
               { 
-                src: "/images/dnv-case-study/design-system/Label.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/design-system/Label.png',
                 title: "Label System",
                 desc: "Consistent labeling for forms and navigation"
               },
               { 
-                src: "/images/dnv-case-study/design-system/Action.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/design-system/Action.png',
                 title: "Action Components",
                 desc: "Interactive elements and micro-interactions"
               }
@@ -290,32 +290,32 @@ const DNVCaseStudySimple = ({ onBack }) => {
           }}>
             {[
               { 
-                src: "/images/dnv-case-study/final-designs/Initial Page.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/Initial Page.png',
                 title: "Landing Page",
                 desc: "Clean, professional entry point to the accreditation portal"
               },
               { 
-                src: "/images/dnv-case-study/final-designs/Login-Hospital Login.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/Login-Hospital Login.png',
                 title: "Hospital Login",
                 desc: "Secure authentication interface for healthcare facilities"
               },
               { 
-                src: "/images/dnv-case-study/final-designs/Hospital Profile - Organization Information.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/Hospital Profile - Organization Information.png',
                 title: "Organization Profile",
                 desc: "Comprehensive hospital information and accreditation status"
               },
               { 
-                src: "/images/dnv-case-study/final-designs/New or Existing.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/New or Existing.png',
                 title: "User Journey Selection",
                 desc: "Clear onboarding flow separating new and existing users"
               },
               { 
-                src: "/images/dnv-case-study/final-designs/New DNV Quote Request.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/New DNV Quote Request.png',
                 title: "Quote Request Form",
                 desc: "Streamlined multi-step form with intelligent validation"
               },
               { 
-                src: "/images/dnv-case-study/final-designs/analysis.png",
+                src: (process.env.PUBLIC_URL || '') + '/images/dnv-case-study/final-designs/analysis.png',
                 title: "Analytics Dashboard",
                 desc: "Data visualization for tracking accreditation progress"
               }

@@ -5,6 +5,8 @@ import { HiArrowLeft, HiClock, HiUser, HiExternalLink, HiUsers, HiChartBar, HiDe
 import './DNVAccreditationCaseStudy.css';
 
 const DNVAccreditationCaseStudy = ({ onBack }) => {
+  // Get the base URL for images
+  const baseImageUrl = (process.env.PUBLIC_URL || '') + '/images';
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -314,7 +316,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="wireframe-image">
                 <img 
-                  src="/images/dnv-case-study/wireframes/wireframe_dnv_healthcare_homepage.png" 
+                  src=baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_healthcare_homepage.png" 
                   alt="DNV Healthcare Homepage Wireframe"
                 />
               </div>
@@ -332,7 +334,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="wireframe-image">
                 <img 
-                  src="/images/dnv-case-study/wireframes/wireframe_dnv_quote_request_form.png" 
+                  src=baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_quote_request_form.png" 
                   alt="Quote Request Form Wireframe"
                 />
               </div>
@@ -350,7 +352,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="wireframe-image">
                 <img 
-                  src="/images/dnv-case-study/wireframes/wireframe_dnv_hospital_profile.png" 
+                  src=baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_hospital_profile.png" 
                   alt="Hospital Profile Wireframe"
                 />
               </div>
@@ -368,7 +370,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="wireframe-image">
                 <img 
-                  src="/images/dnv-case-study/wireframes/wireframe_dnv_hospital_lookup_map.png" 
+                  src=baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_hospital_lookup_map.png" 
                   alt="Hospital Lookup Map Wireframe"
                 />
               </div>
@@ -386,7 +388,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="wireframe-image">
                 <img 
-                  src="/images/dnv-case-study/wireframes/wireframe_clara_ai_assistant.png" 
+                  src=baseImageUrl + '/dnv-case-study/wireframes/wireframe_clara_ai_assistant.png" 
                   alt="Clara AI Assistant Wireframe"
                 />
               </div>
@@ -404,7 +406,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="wireframe-image">
                 <img 
-                  src="/images/dnv-case-study/wireframes/image.png" 
+                  src=baseImageUrl + '/dnv-case-study/wireframes/image.png" 
                   alt="Additional Wireframe"
                 />
               </div>
@@ -439,7 +441,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="design-system-image">
                 <img 
-                  src="/images/dnv-case-study/design-system/Color Palette.png" 
+                  src=baseImageUrl + '/dnv-case-study/design-system/Color Palette.png" 
                   alt="Color Palette Design System"
                 />
               </div>
@@ -457,7 +459,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="design-system-image">
                 <img 
-                  src="/images/dnv-case-study/design-system/Typography.png" 
+                  src=baseImageUrl + '/dnv-case-study/design-system/Typography.png" 
                   alt="Typography Design System"
                 />
               </div>
@@ -475,7 +477,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="design-system-image">
                 <img 
-                  src="/images/dnv-case-study/design-system/Button.png" 
+                  src=baseImageUrl + '/dnv-case-study/design-system/Button.png" 
                   alt="Button Component System"
                 />
               </div>
@@ -493,7 +495,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="design-system-image">
                 <img 
-                  src="/images/dnv-case-study/design-system/Action.png" 
+                  src=baseImageUrl + '/dnv-case-study/design-system/Action.png" 
                   alt="Action Components"
                 />
               </div>
@@ -511,7 +513,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="design-system-image">
                 <img 
-                  src="/images/dnv-case-study/design-system/Label.png" 
+                  src=baseImageUrl + '/dnv-case-study/design-system/Label.png" 
                   alt="Label System"
                 />
               </div>
@@ -546,7 +548,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="final-design-image">
                 <img 
-                  src="/images/dnv-case-study/final-designs/Login-Hospital Login.png" 
+                  src=baseImageUrl + '/dnv-case-study/final-designs/Login-Hospital Login.png" 
                   alt="Hospital Login Interface"
                 />
               </div>
@@ -569,7 +571,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="final-design-image">
                 <img 
-                  src="/images/dnv-case-study/final-designs/New DNV Quote Request.png" 
+                  src=baseImageUrl + '/dnv-case-study/final-designs/New DNV Quote Request.png" 
                   alt="DNV Quote Request Interface"
                 />
               </div>
@@ -592,7 +594,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="final-design-image">
                 <img 
-                  src="/images/dnv-case-study/final-designs/New or Existing.png" 
+                  src=baseImageUrl + '/dnv-case-study/final-designs/New or Existing.png" 
                   alt="User Path Selection Interface"
                 />
               </div>
@@ -615,7 +617,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="final-design-image">
                 <img 
-                  src="/images/dnv-case-study/final-designs/Initial Page.png" 
+                  src=baseImageUrl + '/dnv-case-study/final-designs/Initial Page.png" 
                   alt="Dashboard Initial Page"
                 />
               </div>
@@ -638,7 +640,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="final-design-image">
                 <img 
-                  src="/images/dnv-case-study/final-designs/Hospital Profile - Organization Information.png" 
+                  src=baseImageUrl + '/dnv-case-study/final-designs/Hospital Profile - Organization Information.png" 
                   alt="Hospital Organization Profile"
                 />
               </div>
@@ -661,7 +663,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="final-design-image">
                 <img 
-                  src="/images/dnv-case-study/final-designs/analysis.png" 
+                  src=baseImageUrl + '/dnv-case-study/final-designs/analysis.png" 
                   alt="Analytics and Reporting Interface"
                 />
               </div>

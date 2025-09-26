@@ -174,7 +174,7 @@ const CanaraBankCaseStudy = ({ onBack }) => {
                                 flexShrink: 0
                             }}>
                                 <img
-                                    src="/images/canara-bank-case-study/persona.png"
+                                    src={(process.env.PUBLIC_URL || '') + '/images/canara-bank-case-study/persona.png'}
                                     alt="Raj Kumar- Active Credit Card User Persona"
                                     style={{
                                         width: '100%',
@@ -186,7 +186,7 @@ const CanaraBankCaseStudy = ({ onBack }) => {
                                         e.target.nextSibling.style.display = 'flex';
                                     }}
                                 />
-                                {/* <img src="/images/canara-bank-case-study/persona.png" alt="Alex Chen" style="width: 100%; height: 100%; object-fit: cover;"></img> */}
+                                {/* <img src=(process.env.PUBLIC_URL || '') + '/images/canara-bank-case-study/persona.png" alt="Alex Chen" style="width: 100%; height: 100%; object-fit: cover;"></img> */}
                                 <div style={{
                                     display: 'none',
                                     padding: '3rem',
@@ -246,37 +246,37 @@ const CanaraBankCaseStudy = ({ onBack }) => {
                 }}>
                     {[
                         {
-                            src: "/images/canara-bank-case-study/Dashboard.png",
+                            src: (process.env.PUBLIC_URL || '') + '/images/canara-bank-case-study/Dashboard.png',
                             title: "Dashboard Overview",
                             desc: "Central hub displaying account balance, credit limit, recent transactions, and quick access to key features like bill payment via QR code."
                         },
                         {
-                            src: "/images/canara-bank-case-study/statement.png",
+                            src: (process.env.PUBLIC_URL || '') + '/images/canara-bank-case-study/statement.png',
                             title: "Transaction Statement",
                             desc: "Comprehensive transaction history with detailed merchant information, amounts, and categorization for better financial tracking."
                         },
                         {
-                            src: "/images/canara-bank-case-study/Rewards.png",
+                            src: (process.env.PUBLIC_URL || '') + '/images/canara-bank-case-study/Rewards.png',
                             title: "Rewards Management",
                             desc: "Points tracking, redemption catalog, and benefits overview with clear CTAs for reward claiming and points utilization."
                         },
                         {
-                            src: "/images/canara-bank-case-study/Manage cards.png",
+                            src: (process.env.PUBLIC_URL || '') + '/images/canara-bank-case-study/Manage cards.png',
                             title: "Card Usage Controls",
                             desc: "Security settings and usage management with toggle controls for domestic/international transactions and spending limits."
                         },
                         {
-                            src: "/images/canara-bank-case-study/Tools.png",
+                            src: (process.env.PUBLIC_URL || '') + '/images/canara-bank-case-study/Tools.png',
                             title: "Financial Tools",
                             desc: "EMI calculator and financial planning tools for personal loans, home loans, and car loans with interactive calculations."
                         },
                         {
-                            src: "/images/canara-bank-case-study/Feedback.png",
+                            src: (process.env.PUBLIC_URL || '') + '/images/canara-bank-case-study/Feedback.png',
                             title: "Customer Feedback",
                             desc: "Service rating system and referral program interface for customer engagement and service improvement."
                         },
                         {
-                            src: "/images/canara-bank-case-study/Support.png",
+                            src: (process.env.PUBLIC_URL || '') + '/images/canara-bank-case-study/Support.png',
                             title: "Customer Support",
                             desc: "Comprehensive FAQ section and multiple contact options including call, email, chat, and branch visit information."
                         }

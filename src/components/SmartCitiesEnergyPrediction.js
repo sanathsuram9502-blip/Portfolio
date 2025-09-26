@@ -272,12 +272,12 @@ const SmartCitiesEnergyPrediction = ({ onBack }) => {
                     }}>
                         {[
                             {
-                                src: "/images/energy-consumption-case-study/rq1-graph1.png",
+                                src: (process.env.PUBLIC_URL || '') + '/images/energy-consumption-case-study/rq1-graph1.png',
                                 title: "Electricity Consumption by Climate Zone",
                                 desc: "Zone 1 (Hot-Humid) shows highest electricity consumption (~260,000 MWh) for cooling needs, with progressively decreasing consumption in colder zones."
                             },
                             {
-                                src: "/images/energy-consumption-case-study/rq1-graph2.png",
+                                src: (process.env.PUBLIC_URL || '') + '/images/energy-consumption-case-study/rq1-graph2.png',
                                 title: "Natural Gas Consumption by Climate Zone",
                                 desc: "Zones 4-5 (Cold/Very Cold) demonstrate peak natural gas consumption (~190,000 Tcf) for heating, with lowest consumption in hot zones."
                             }
@@ -354,12 +354,12 @@ const SmartCitiesEnergyPrediction = ({ onBack }) => {
                     }}>
                         {[
                             {
-                                src: "/images/energy-consumption-case-study/rq2-graph1.png",
+                                src: (process.env.PUBLIC_URL || '') + '/images/energy-consumption-case-study/rq2-graph1.png',
                                 title: "Electricity Consumption by Population Cohort",
                                 desc: "Exponential growth pattern showing massive energy demands in population cohort 20 (>39M residents) with minimal baseline consumption in small cities."
                             },
                             {
-                                src: "/images/energy-consumption-case-study/rq2-graph2.png",
+                                src: (process.env.PUBLIC_URL || '') + '/images/energy-consumption-case-study/rq2-graph2.png',
                                 title: "Natural Gas Consumption by Population Cohort",
                                 desc: "Similar exponential pattern for natural gas consumption, with urban centers showing disproportionately high per-capita consumption due to density effects."
                             }
@@ -421,12 +421,12 @@ const SmartCitiesEnergyPrediction = ({ onBack }) => {
                 }}>
                     {[
                         {
-                            src: "/images/energy-consumption-case-study/randomForestRegression.png",
+                            src: (process.env.PUBLIC_URL || '') + '/images/energy-consumption-case-study/randomForestRegression.png',
                             title: "Random Forest Regression Analysis",
                             desc: "Random Forest achieved 94% accuracy (R² = 0.941) for electricity prediction and 77% for natural gas, excelling at capturing complex nonlinear relationships."
                         },
                         {
-                            src: "/images/energy-consumption-case-study/knn.png",
+                            src: (process.env.PUBLIC_URL || '') + '/images/energy-consumption-case-study/knn.png',
                             title: "K-Nearest Neighbors Performance",
                             desc: "KNN regression achieved 91% accuracy for electricity and 86% for natural gas prediction, performing better for natural gas through local interpolation of similar cities."
                         }

@@ -21,6 +21,9 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [showCaseStudy, setShowCaseStudy] = useState(null);
 
+  // Get the base URL for images
+  const baseImageUrl = (process.env.PUBLIC_URL || '') + '/images';
+
 
   const projects = [
     // {
@@ -29,7 +32,7 @@ const Projects = () => {
     //   category: 'ui-ux',
     //   description: 'A comprehensive hospital accreditation platform with 100+ screens designed for healthcare quality management, compliance tracking, and certification workflows.',
     //   tags: ['Healthcare', 'Enterprise', 'Compliance', 'Portal Design'],
-    //   image: '/images/dnv-case-study/final-designs/mockup.png',
+    //   image: '${process.env.PUBLIC_URL}/images/dnv-case-study/final-designs/mockup.png',
     //   link: '#',
     //   type: 'Case Study',
     //   hasDetailedCaseStudy: true
@@ -71,7 +74,7 @@ const Projects = () => {
       category: 'ui-ux',
       description: 'Complete redesign of the BSNL mobile application, focusing on enhancing user experience and streamlining telecom service management with modern UI design.',
       tags: ['Mobile App', 'Telecommunications', 'UX Design', 'Service Management'],
-      image: '/images/bsnl-case-study/new_screens/mockup.png',
+      image: baseImageUrl + '/bsnl-case-study/new_screens/mockup.png',
       link: '#',
       type: 'Case Study',
       hasDetailedCaseStudy: true
@@ -82,7 +85,7 @@ const Projects = () => {
       category: 'ui-ux',
       description: 'Comprehensive multi-channel communication analytics dashboard that unified Email, SMS, and WhatsApp performance data into a single, intuitive interface for enterprise teams.',
       tags: ['Analytics', 'Dashboard', 'Enterprise', 'UX Design'],
-      image: '/images/uniserve-case-study/Channel.png',
+      image: baseImageUrl + '/uniserve-case-study/Channel.png',
       link: '#',
       type: 'Case Study',
       hasDetailedCaseStudy: true
@@ -93,7 +96,7 @@ const Projects = () => {
       category: 'ui-ux',
       description: 'UX analysis and research of a comprehensive credit card management platform featuring account management, rewards, payments, and customer support.',
       tags: ['Banking', 'Financial Services', 'UX Research', 'Platform Design'],
-      image: '/images/canara-bank-case-study/Dashboard.png',
+      image: baseImageUrl + '/canara-bank-case-study/Dashboard.png',
       link: '#',
       type: 'Case Study',
       hasDetailedCaseStudy: true
@@ -104,7 +107,7 @@ const Projects = () => {
       category: 'data',
       description: 'Machine learning-driven analysis of residential energy consumption patterns across U.S. cities using Random Forest and KNN algorithms to predict electricity and natural gas usage.',
       tags: ['Machine Learning', 'Data Analysis', 'Smart Cities', 'Energy Prediction'],
-      image: '/images/energy-consumption-case-study/rq1-graph1.png',
+      image: baseImageUrl + '/energy-consumption-case-study/rq1-graph1.png',
       link: '#',
       type: 'Case Study',
       hasDetailedCaseStudy: true
@@ -199,7 +202,7 @@ const Projects = () => {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <span style={{ color: '#06b6d4' }}>👤</span>
-              <span>Lead UX/UI Designer</span>
+              <span>UX/UI Designer</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <span style={{ color: '#06b6d4' }}>👥</span>
@@ -247,22 +250,22 @@ const Projects = () => {
             }}>
               {[
                 { 
-                  src: "/images/bsnl-case-study/BSNL App Home Screen Wireframe.png",
+                  src: baseImageUrl + '/bsnl-case-study/BSNL App Home Screen Wireframe.png',
                   title: "Home Screen Wireframe",
                   desc: "Initial wireframe design for the main dashboard"
                 },
                 { 
-                  src: "/images/bsnl-case-study/BSNL App Account Screen Wireframe.png",
+                  src: baseImageUrl + '/bsnl-case-study/BSNL App Account Screen Wireframe.png',
                   title: "Account Screen Wireframe", 
                   desc: "User account management wireframe"
                 },
                 { 
-                  src: "/images/bsnl-case-study/BSNL App Payments Screen Wireframe.png",
+                  src: baseImageUrl + '/bsnl-case-study/BSNL App Payments Screen Wireframe.png',
                   title: "Payments Screen Wireframe",
                   desc: "Bill payment flow wireframe"
                 },
                 { 
-                  src: "/images/bsnl-case-study/BSNL App Services Screen Wireframe.png",
+                  src: baseImageUrl + '/bsnl-case-study/BSNL App Services Screen Wireframe.png',
                   title: "Services Screen Wireframe",
                   desc: "Service management wireframe"
                 }
@@ -338,22 +341,22 @@ const Projects = () => {
             }}>
               {[
                 { 
-                  src: "/images/bsnl-case-study/BSNL App Home Screen Hi-Fi Design.png",
+                  src: baseImageUrl + '/bsnl-case-study/BSNL App Home Screen Hi-Fi Design.png',
                   title: "Home Screen Design",
                   desc: "Final high-fidelity home screen design with modern UI"
                 },
                 { 
-                  src: "/images/bsnl-case-study/BSNL App Account Screen Hi-Fi Design.png",
+                  src: baseImageUrl + '/bsnl-case-study/BSNL App Account Screen Hi-Fi Design.png',
                   title: "Account Screen Design",
                   desc: "Clean account management interface"
                 },
                 { 
-                  src: "/images/bsnl-case-study/BSNL App Payments Screen Hi-Fi Design.png",
+                  src: baseImageUrl + '/bsnl-case-study/BSNL App Payments Screen Hi-Fi Design.png',
                   title: "Payments Screen Design",
                   desc: "Streamlined payment experience"
                 },
                 { 
-                  src: "/images/bsnl-case-study/BSNL App Services Screen Hi-Fi Design.png",
+                  src: baseImageUrl + '/bsnl-case-study/BSNL App Services Screen Hi-Fi Design.png',
                   title: "Services Screen Design",
                   desc: "Organized service management interface"
                 }
