@@ -224,7 +224,7 @@ const Hero = () => {
               animate={controls}
             >
               <motion.img 
-                src="/Portfolio/images/canara-bank-case-study/profile-pic.png" 
+                src="/images/canara-bank-case-study/profile-pic.png" 
                 alt="Sanath Suram - UI/UX Designer"
                 className="profile-image"
                 whileHover={{ 
