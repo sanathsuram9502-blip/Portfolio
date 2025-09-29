@@ -152,7 +152,7 @@ const Hero = () => {
               </motion.button>
               
               <motion.a 
-                href="/SanathSuram _UI _UX Designer2.pdf" 
+                href="/SanathSuram _UI _UX_Designer.pdf"
                 className="btn-secondary"
                 download
                 whileHover={{ 
