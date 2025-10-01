@@ -183,7 +183,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.1, y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <CounterNumber target={5} suffix="+" />
+                <CounterNumber target={4} suffix="+" />
                 <span className="stat-label">Years of Experience</span>
               </motion.div>
               <motion.div 
