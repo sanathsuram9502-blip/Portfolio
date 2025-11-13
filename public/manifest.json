@@ -1,0 +1,22 @@
+{
+  "short_name": "Sanath Portfolio",
+  "name": "Sanath Suram - UI/UX Designer Portfolio",
+  "description": "Portfolio showcasing UI/UX design work and case studies",
+  "icons": [
+    {
+      "src": "images/favicon/fav-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/favicon/fav-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4285f4",
+  "background_color": "#0a0a0a",
+  "orientation": "portrait-primary"
+}
