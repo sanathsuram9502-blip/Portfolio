@@ -151,7 +151,7 @@ const Contact = () => {
 
                         <div className="contact-details">
                             {contactInfo.map((info) => (
-                                <div key={info.label} className="contact-item">
+                                <div key={info.label} className="contact-item" style={{ display: info.label === 'Phone' ? 'none' : 'flex' }}>
                                     <div className="contact-icon">{info.icon}</div>
                                     <div className="contact-text">
                                         <span className="contact-label">{info.label}</span>
