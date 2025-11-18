@@ -32,7 +32,7 @@ const Projects = () => {
       category: 'ui-ux',
       description: 'Led product design to transform legacy healthcare accreditation workflows into scalable digital systems for DNV and institutions—driving efficiency, collaboration, and helping the startup secure major funding.',
       tags: ['Healthcare SaaS', 'Product Design Lead', 'Design System', '300+ Screens'],
-      image: baseImageUrl + '/medlaunch/Initial Page.png',
+      image: baseImageUrl + '/medlaunch/portfolio-mockup.png',
       link: '#',
       type: 'Case Study',
       hasDetailedCaseStudy: true
