@@ -121,7 +121,7 @@ const Hero = () => {
               experiences that drive real business impact.
             </motion.p> */}
 
-            <motion.div
+            {/* <motion.div
               className="hero-actions"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -170,7 +170,7 @@ const Hero = () => {
                 </motion.div>
                 Download Resume
               </motion.a>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               className="hero-stats"

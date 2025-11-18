@@ -13,7 +13,7 @@ const DNVMedlaunchCaseStudy = ({ onBack }) => {
         background: 'var(--bg-primary)',
         color: 'var(--text-primary)',
         padding: '2rem',
-        maxWidth: '1400px',
+        maxWidth: '1200px',
         margin: '0 auto'
       },
       backButton: {
@@ -32,29 +32,25 @@ const DNVMedlaunchCaseStudy = ({ onBack }) => {
         transition: 'all 0.3s ease'
       },
       title: {
-        fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+        fontSize: '3rem',
+        fontWeight: '700',
         marginBottom: '1rem',
-        background: 'var(--gradient-primary)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        backgroundClip: 'text',
-        lineHeight: '1.2'
+        color: 'var(--text-primary)'
       },
       subtitle: {
-        fontSize: 'clamp(1rem, 2vw, 1.3rem)',
+        fontSize: '1.2rem',
         color: 'var(--text-secondary)',
         marginBottom: '2rem',
         lineHeight: '1.6'
       },
       sectionTitle: {
-        fontSize: 'clamp(1.8rem, 3vw, 2.5rem)',
+        fontSize: '2rem',
         marginBottom: '2rem',
         marginTop: '4rem',
-        color: 'var(--text-primary)',
-        fontWeight: '700'
+        color: 'var(--text-primary)'
       },
       subsectionTitle: {
-        fontSize: 'clamp(1.3rem, 2.5vw, 1.8rem)',
+        fontSize: '1.5rem',
         marginBottom: '1.5rem',
         marginTop: '3rem',
         color: 'var(--accent-primary)',
@@ -451,13 +447,13 @@ const DNVMedlaunchCaseStudy = ({ onBack }) => {
           </div>
         </div>
 
-        <div style={styles.imageContainer}>
+        {/* <div style={styles.imageContainer}>
           <img
             src={`${baseImageUrl}/Label.png`}
             alt="Label Components"
             style={{ width: '100%', height: 'auto', display: 'block' }}
           />
-        </div>
+        </div> */}
 
         {/* Final Designs */}
         <h3 style={styles.subsectionTitle}>Final Designs</h3>
@@ -592,7 +588,7 @@ const DNVMedlaunchCaseStudy = ({ onBack }) => {
       </motion.div>
 
       {/* Retrospective */}
-      <motion.section
+      {/* <motion.section
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.8 }}
@@ -618,7 +614,7 @@ const DNVMedlaunchCaseStudy = ({ onBack }) => {
             <strong>Balancing cohesion and variety:</strong> I created a design system that scaled across 300+ screens without sacrificing clarity or consistency. While keeping things cohesive, I never took shortcuts—whenever a new use case emerged, I thoughtfully introduced new components instead of forcing mismatched patterns.
           </p>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* Back Button at Bottom */}
       <motion.button
