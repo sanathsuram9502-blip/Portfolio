@@ -4,11 +4,11 @@ import { useInView } from 'react-intersection-observer';
 import { HiExternalLink, HiEye } from 'react-icons/hi';
 import { useTheme } from '../context/ThemeContext';
 import LeadsProCaseStudy from './LeadsProCaseStudy';
-import DNVCaseStudyThemed from './DNVCaseStudyThemed';
+import DNVMedlaunchCaseStudy from './DNVMedlaunchCaseStudy';
 import BSNLCaseStudyThemed from './BSNLCaseStudyThemed';
 import UniServeReachCaseStudy from './UniServeReachCaseStudy';
 import CanaraBankCaseStudy from './canaraBankCaseStudy';
-import SmartCitiesEnergyPrediction from './SmartCitiesEnergyPrediction'; 
+import SmartCitiesEnergyPrediction from './SmartCitiesEnergyPrediction';
 import './Projects.css';
 
 const Projects = () => {
@@ -26,17 +26,17 @@ const Projects = () => {
 
 
   const projects = [
-    // {
-    //   id: 1,
-    //   title: 'DNV Accreditation Portal',
-    //   category: 'ui-ux',
-    //   description: 'A comprehensive hospital accreditation platform with 100+ screens designed for healthcare quality management, compliance tracking, and certification workflows.',
-    //   tags: ['Healthcare', 'Enterprise', 'Compliance', 'Portal Design'],
-    //   image: '${process.env.PUBLIC_URL}/images/dnv-case-study/final-designs/mockup.png',
-    //   link: '#',
-    //   type: 'Case Study',
-    //   hasDetailedCaseStudy: true
-    // },
+    {
+      id: 1,
+      title: 'DNV & Medlaunch Accreditation',
+      category: 'ui-ux',
+      description: 'Led product design to transform legacy healthcare accreditation workflows into scalable digital systems for DNV and institutions—driving efficiency, collaboration, and helping the startup secure major funding.',
+      tags: ['Healthcare SaaS', 'Product Design Lead', 'Design System', '300+ Screens'],
+      image: baseImageUrl + '/medlaunch/Initial Page.png',
+      link: '#',
+      type: 'Case Study',
+      hasDetailedCaseStudy: true
+    },
     // {
     //   id: 2,
     //   title: 'Leads Pro CRM',
@@ -134,7 +134,7 @@ const Projects = () => {
   };
 
   if (showCaseStudy === 1) {
-    return <DNVCaseStudyThemed onBack={() => setShowCaseStudy(null)} />;
+    return <DNVMedlaunchCaseStudy onBack={() => setShowCaseStudy(null)} />;
   }
   
   if (showCaseStudy === 2) {
