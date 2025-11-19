@@ -10,11 +10,7 @@ import {
     HiOutlinePaperAirplane
 } from 'react-icons/hi';
 import {
-    FaLinkedin,
-    FaDribbble,
-    FaBehance,
-    FaTwitter,
-    FaGithub
+    FaLinkedin
 } from 'react-icons/fa';
 import './Contact.css';
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { HiDownload, HiArrowDown } from 'react-icons/hi';
+import { HiArrowDown } from 'react-icons/hi';
 import './Hero.css';
 
 // Counter component for animated numbers
@@ -54,6 +54,7 @@ const Hero = () => {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 3000);
     return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Floating animation trigger

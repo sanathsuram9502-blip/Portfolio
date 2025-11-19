@@ -10,7 +10,7 @@ const About = () => {
     triggerOnce: true,
   });
 
-  const journeySteps = [
+  /* const journeySteps = [
     {
       icon: <HiCamera />,
       title: 'The Beginning - Photographer',
@@ -41,7 +41,7 @@ const About = () => {
       period: '📊',
       description: 'To deepen my impact, I pursued a Master\'s in Advanced Data Analytics, gaining expertise in making data-driven design decisions. Today, I blend user insights, behavioral data, and UX principles to craft experiences that are visually stunning and deeply intuitive.'
     }
-  ];
+  ]; */
 
   const skills = [
     {
