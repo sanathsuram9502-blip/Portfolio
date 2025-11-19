@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { HiCode, HiColorSwatch, HiLightBulb, HiUsers, HiCamera, HiDesktopComputer, HiCube, HiChartBar } from 'react-icons/hi';
+import { HiCode, HiColorSwatch, HiLightBulb, HiUsers } from 'react-icons/hi';
 import './About.css';
 
 const About = () => {
