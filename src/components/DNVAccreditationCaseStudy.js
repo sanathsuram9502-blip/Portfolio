@@ -143,24 +143,36 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
 
   const designChallenges = [
     {
-      challenge: 'Complex Healthcare Regulations',
-      solution: 'Created intuitive interfaces that guide users through complex compliance workflows step-by-step',
-      impact: 'Reduced training time for new users from 2 weeks to 3 days'
+      number: '01',
+      title: 'No Design System',
+      challenge: 'When I first joined the company, they only had a design guideline written in a doc',
+      solution: 'I built and maintained the design system, which serves 300+ screens to make a cohesive visual.',
+      icon: '📄',
+      solutionIcon: '🎨'
     },
     {
-      challenge: 'Information Overload',
-      solution: 'Implemented progressive disclosure and smart filtering to surface relevant information contextually',
-      impact: 'Improved task completion rates by 45%'
+      number: '02',
+      title: 'Conflicting Ideas',
+      challenge: 'There were times when the PM and I had different ideas, and it wasn\'t clear which direction was better',
+      solution: 'I conducted competitive research, then discussed with PM to figure out the best decision.',
+      icon: '💭',
+      solutionIcon: '💡'
     },
     {
-      challenge: 'Multi-role User Base',
-      solution: 'Designed role-specific dashboards and customizable interfaces for different user types',
-      impact: 'Increased user satisfaction scores by 40%'
+      number: '03',
+      title: 'Layout Uncertainty',
+      challenge: 'Sometimes I wasn\'t sure which page layout would work better.',
+      solution: 'I usually designed 2–3 variations and then asked colleagues for feedback.',
+      icon: '❓',
+      solutionIcon: '💬'
     },
     {
-      challenge: 'Legacy System Integration',
-      solution: 'Created seamless data import/export flows and maintained familiar interaction patterns',
-      impact: 'Smooth migration with 95% user adoption rate'
+      number: '04',
+      title: 'Inconsistent Quality',
+      challenge: 'At first, since there was no QA team, the design quality wasn\'t consistent.',
+      solution: 'I took the initiative to review the outcomes and created a fix checklist for developers.',
+      icon: '⚠️',
+      solutionIcon: '✅'
     }
   ];
 
@@ -316,7 +328,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="wireframe-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_healthcare_homepage.png" 
+                  src={baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_healthcare_homepage.png'} 
                   alt="DNV Healthcare Homepage Wireframe"
                 />
               </div>
@@ -334,7 +346,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="wireframe-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_quote_request_form.png" 
+                  src={baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_quote_request_form.png'} 
                   alt="Quote Request Form Wireframe"
                 />
               </div>
@@ -352,7 +364,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="wireframe-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_hospital_profile.png" 
+                  src={baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_hospital_profile.png'} 
                   alt="Hospital Profile Wireframe"
                 />
               </div>
@@ -370,7 +382,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="wireframe-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_hospital_lookup_map.png" 
+                  src={baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_hospital_lookup_map.png'} 
                   alt="Hospital Lookup Map Wireframe"
                 />
               </div>
@@ -388,7 +400,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="wireframe-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/wireframes/wireframe_clara_ai_assistant.png" 
+                  src={baseImageUrl + '/dnv-case-study/wireframes/wireframe_clara_ai_assistant.png'} 
                   alt="Clara AI Assistant Wireframe"
                 />
               </div>
@@ -406,7 +418,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="wireframe-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/wireframes/image.png" 
+                  src={baseImageUrl + '/dnv-case-study/wireframes/image.png'} 
                   alt="Additional Wireframe"
                 />
               </div>
@@ -441,7 +453,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="design-system-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/design-system/Color Palette.png" 
+                  src={baseImageUrl + '/dnv-case-study/design-system/Color Palette.png'} 
                   alt="Color Palette Design System"
                 />
               </div>
@@ -459,7 +471,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="design-system-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/design-system/Typography.png" 
+                  src={baseImageUrl + '/dnv-case-study/design-system/Typography.png'} 
                   alt="Typography Design System"
                 />
               </div>
@@ -477,7 +489,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="design-system-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/design-system/Button.png" 
+                  src={baseImageUrl + '/dnv-case-study/design-system/Button.png'} 
                   alt="Button Component System"
                 />
               </div>
@@ -495,7 +507,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="design-system-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/design-system/Action.png" 
+                  src={baseImageUrl + '/dnv-case-study/design-system/Action.png'} 
                   alt="Action Components"
                 />
               </div>
@@ -511,12 +523,12 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1.0 }}
             >
-              <div className="design-system-image">
+              {/* <div className="design-system-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/design-system/Label.png" 
+                  src={baseImageUrl + '/dnv-case-study/design-system/Label.png'} 
                   alt="Label System"
                 />
-              </div>
+              </div> */}
               <div className="design-system-details">
                 <h4>Label System</h4>
                 <p>Consistent labeling and form elements for clear user guidance</p>
@@ -548,7 +560,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="final-design-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/final-designs/Login-Hospital Login.png" 
+                  src={baseImageUrl + '/dnv-case-study/final-designs/Login-Hospital Login.png'} 
                   alt="Hospital Login Interface"
                 />
               </div>
@@ -571,7 +583,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="final-design-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/final-designs/New DNV Quote Request.png" 
+                  src={baseImageUrl + '/dnv-case-study/final-designs/New DNV Quote Request.png'} 
                   alt="DNV Quote Request Interface"
                 />
               </div>
@@ -594,7 +606,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="final-design-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/final-designs/New or Existing.png" 
+                  src={baseImageUrl + '/dnv-case-study/final-designs/New or Existing.png'} 
                   alt="User Path Selection Interface"
                 />
               </div>
@@ -617,7 +629,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="final-design-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/final-designs/Initial Page.png" 
+                  src={baseImageUrl + '/dnv-case-study/final-designs/Initial Page.png'} 
                   alt="Dashboard Initial Page"
                 />
               </div>
@@ -640,7 +652,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="final-design-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/final-designs/Hospital Profile - Organization Information.png" 
+                  src={baseImageUrl + '/dnv-case-study/final-designs/Hospital Profile - Organization Information.png'} 
                   alt="Hospital Organization Profile"
                 />
               </div>
@@ -663,7 +675,7 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
             >
               <div className="final-design-image">
                 <img 
-                  src=baseImageUrl + '/dnv-case-study/final-designs/analysis.png" 
+                  src={baseImageUrl + '/dnv-case-study/final-designs/analysis.png'} 
                   alt="Analytics and Reporting Interface"
                 />
               </div>
@@ -717,32 +729,46 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
 
         {/* Design Challenges */}
         <motion.section
-          className="case-study-section"
+          className="case-study-section challenges-solutions-section"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <h2>Design Challenges & Solutions</h2>
-          <div className="challenges-container">
+          <h2>04 Challenges & Solutions</h2>
+          <div className="challenges-grid">
             {designChallenges.map((item, index) => (
               <motion.div
                 key={index}
-                className="challenge-card"
+                className="challenge-solution-pair"
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
               >
-                <div className="challenge-section">
-                  <h4>Challenge</h4>
-                  <p>{item.challenge}</p>
+                <div className="challenge-side">
+                  <div className="challenge-header">
+                    <span className="challenge-number">Challenge {item.number}</span>
+                    <h3 className="challenge-title">{item.title}</h3>
+                  </div>
+                  <div className="challenge-content">
+                    <div className="challenge-icon">{item.icon}</div>
+                    <p className="challenge-text">{item.challenge}</p>
+                  </div>
                 </div>
-                <div className="solution-section">
-                  <h4>Solution</h4>
-                  <p>{item.solution}</p>
+
+                <div className="arrow-separator">
+                  <svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 12H58M58 12L48 2M58 12L48 22" stroke="var(--accent-primary)" strokeWidth="2"/>
+                  </svg>
                 </div>
-                <div className="impact-section">
-                  <h4>Impact</h4>
-                  <p>{item.impact}</p>
+
+                <div className="solution-side">
+                  <div className="solution-header">
+                    <span className="solution-number">Solution {item.number}</span>
+                  </div>
+                  <div className="solution-content">
+                    <div className="solution-icon">{item.solutionIcon}</div>
+                    <p className="solution-text">{item.solution}</p>
+                  </div>
                 </div>
               </motion.div>
             ))}

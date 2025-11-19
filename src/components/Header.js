@@ -138,11 +138,12 @@ const Header = () => {
                                     className="nav-link"
                                     onClick={(e) => {
                                         e.preventDefault();
+                                        e.stopPropagation();
                                         scrollToSection(item.href);
                                     }}
                                     whileHover={window.innerWidth > 768 ? { y: -2 } : {}}
                                     whileTap={{ scale: 0.98 }}
-                                    style={{ pointerEvents: 'auto' }}
+                                    style={{ pointerEvents: 'auto', position: 'relative', zIndex: 1001 }}
                                 >
                                     {item.label}
                                 </motion.a>
@@ -173,7 +174,7 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* Mobile menu backdrop */}
+            {/* Mobile menu backdrop - must be before nav in DOM for proper z-index layering */}
             {isMenuOpen && (
                 <motion.div
                     className="mobile-backdrop"
@@ -181,6 +182,7 @@ const Header = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onClick={() => setIsMenuOpen(false)}
+                    style={{ pointerEvents: 'auto' }}
                 />
             )}
 
