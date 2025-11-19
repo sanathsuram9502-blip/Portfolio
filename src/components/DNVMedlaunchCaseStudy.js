@@ -313,10 +313,10 @@ const DNVMedlaunchCaseStudy = ({ onBack }) => {
           <span style={styles.metaLabel}>My Role</span>
           <span style={styles.metaValue}>Product Design Lead, UX/UI Design, Design System</span>
         </div>
-        <div style={styles.metaItem}>
+        {/* <div style={styles.metaItem}>
           <span style={styles.metaLabel}>Timeline</span>
           <span style={styles.metaValue}>2025.05 - 2025.08 (4 months)</span>
-        </div>
+        </div> */}
         <div style={styles.metaItem}>
           <span style={styles.metaLabel}>Team</span>
           <span style={styles.metaValue}>UX/UI Designer, PM, Engineers</span>
@@ -336,7 +336,7 @@ const DNVMedlaunchCaseStudy = ({ onBack }) => {
         <h2 style={styles.sectionTitle}>01 Overview</h2>
         <h3 style={styles.subsectionTitle}>My first product design lead role—owning UX from 0 to launch</h3>
         <p style={{...styles.cardText, fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem'}}>
-          In summer 2025, I led product design at a healthcare SaaS startup, designing 2 complex accreditation systems and building 0–1 design systems across over 300+ screens.
+          I led product design at a healthcare SaaS startup, designing 2 complex accreditation systems and building 0–1 design systems across over 300+ screens.
         </p>
         <p style={{...styles.cardText, fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '3rem'}}>
           Beyond UI, I drove cross-team alignment, made confident product decisions, and balanced user needs with business goals. This was also the first time my design work directly supported a successful fundraising round.
