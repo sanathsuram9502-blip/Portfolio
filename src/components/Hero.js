@@ -37,6 +37,7 @@ const Hero = () => {
   const controls = useAnimation();
   
   const roles = [
+    'Design Technologist',
     'UI/UX Designer',
     'Product Designer',
   ];
