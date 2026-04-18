@@ -9,9 +9,6 @@ import {
     HiExternalLink,
     HiOutlinePaperAirplane
 } from 'react-icons/hi';
-import {
-    FaLinkedin
-} from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
