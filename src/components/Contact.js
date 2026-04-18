@@ -95,20 +95,20 @@ const Contact = () => {
         }
     ];
 
-    const socialLinks = [
-        {
-            icon: <FaLinkedin />,
-            label: 'LinkedIn',
-            url: 'https://linkedin.com/in/sanath-suram-84bb8a20b',
-            color: '#0077B5'
-        },
-        // {
-        //     icon: <FaGithub />,
-        //     label: 'GitHub',
-        //     url: 'https://github.com/sanathsuram',
-        //     color: '#333'
-        // }
-    ];
+    // const socialLinks = [
+    //     {
+    //         icon: <FaLinkedin />,
+    //         label: 'LinkedIn',
+    //         url: 'https://linkedin.com/in/sanath-suram-84bb8a20b',
+    //         color: '#0077B5'
+    //     },
+    //     // {
+    //     //     icon: <FaGithub />,
+    //     //     label: 'GitHub',
+    //     //     url: 'https://github.com/sanathsuram',
+    //     //     color: '#333'
+    //     // }
+    // ];
 
     return (
         <section id="contact" className="section contact" ref={ref}>
