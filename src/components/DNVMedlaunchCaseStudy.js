@@ -298,7 +298,7 @@ const DNVMedlaunchCaseStudy = ({ onBack }) => {
           Digitalize the Complex Accreditation Process for Healthcare SaaS · Digitalizing Accreditation for 2 Healthcare SaaS
         </p>
         <p style={{...styles.subtitle, marginTop: '1rem'}}>
-          Led product design to transform legacy healthcare accreditation workflows into scalable digital systems for DNV and institutions—driving efficiency, collaboration, and helping the startup secure major funding.
+          Served as a hybrid UX/UI Designer and UI Developer for a healthcare SaaS startup, navigating a 0-to-1 product cycle to launch two complex accreditation platforms. Architected a robust design system in Figma, then translated those screens into a production-ready component library using React.
         </p>
       </motion.div>
 
@@ -334,20 +334,16 @@ const DNVMedlaunchCaseStudy = ({ onBack }) => {
         transition={{ duration: 0.6, delay: 0.3 }}
       >
         <h2 style={styles.sectionTitle}>01 Overview</h2>
-        <h3 style={styles.subsectionTitle}>My first product design lead role—owning UX from 0 to launch</h3>
+        <h3 style={styles.subsectionTitle}>Hybrid UX/UI Design & Development: From 0 to Launch</h3>
         <p style={{...styles.cardText, fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem'}}>
-          I led product design at a healthcare SaaS startup, designing 2 complex accreditation systems and building 0–1 design systems across over 300+ screens.
-        </p>
-        <p style={{...styles.cardText, fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '3rem'}}>
-          Beyond UI, I drove cross-team alignment, made confident product decisions, and balanced user needs with business goals. This was also the first time my design work directly supported a successful fundraising round.
-        </p>
+          I served as both the UX/UI Designer and UI Developer for a healthcare SaaS startup, owning the end-to-end product lifecycle from concept to code. I designed two complex accreditation platforms and built the underlying 0–1 design system across 300+ screens. By bridging the gap between design and engineering, I ensured seamless execution of the UI, translating Figma prototypes directly into production-ready React components. My dual-focus on user-centered design and technical implementation was a pivotal driver in the company’s successful fundraising round, demonstrating the product’s viability through both visual and functional excellence.</p>
 
         {/* Contributions */}
         <div style={styles.contributionCard}>
           <div style={styles.contributionNumber}>01</div>
           <h4 style={styles.cardTitle}>Contributions</h4>
           <p style={styles.cardText}>
-            Established 2 accreditation systems & a cohesive design system with PM and engineers
+            Accreditation Systems & Design System Implementation
           </p>
         </div>
 
@@ -355,7 +351,7 @@ const DNVMedlaunchCaseStudy = ({ onBack }) => {
           <div style={styles.contributionNumber}>02</div>
           <h4 style={styles.cardTitle}>Contributions</h4>
           <p style={styles.cardText}>
-            Rebranding the company website to enhance visual identity and clarity
+            Website Rebrand & Technical Execution
           </p>
         </div>
       </motion.section>

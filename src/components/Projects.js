@@ -30,7 +30,7 @@ const Projects = () => {
       id: 1,
       title: 'DNV & Medlaunch Accreditation',
       category: 'ui-ux',
-      description: 'Led product design to transform legacy healthcare accreditation workflows into scalable digital systems for DNV and institutions—driving efficiency, collaboration, and helping the startup secure major funding.',
+      description: 'Served as a hybrid UX/UI Designer and UI Developer for a healthcare SaaS startup, navigating a 0-to-1 product cycle to launch two complex accreditation platforms. Architected a robust design system in Figma, then translated those screens into a production-ready component library using React.',
       tags: ['Healthcare SaaS', 'Product Design Lead', 'Design System', '300+ Screens'],
       image: baseImageUrl + '/medlaunch/portfolio-mockup.png',
       link: '#',
