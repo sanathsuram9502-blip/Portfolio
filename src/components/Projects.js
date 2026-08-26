@@ -9,6 +9,7 @@ import BSNLCaseStudyThemed from './BSNLCaseStudyThemed';
 import UniServeReachCaseStudy from './UniServeReachCaseStudy';
 import CanaraBankCaseStudy from './canaraBankCaseStudy';
 import SmartCitiesEnergyPrediction from './SmartCitiesEnergyPrediction';
+import TrustHandoffCaseStudy from './TrustHandoffCaseStudy';
 import './Projects.css';
 
 const Projects = () => {
@@ -26,6 +27,17 @@ const Projects = () => {
 
 
   const projects = [
+    {
+      id: 9,
+      title: 'Designing Trust into AI-to-Human Handoffs',
+      category: 'ui-ux',
+      description: 'A self-directed service design exploration of an AI customer support conversation — how you hand a customer to a human without losing the trust the AI already built. One visual pass applies the concept to Verizon\'s brand identity as an unaffiliated design exercise, not commissioned work.',
+      tags: ['Service Design', 'AI/UX', 'Concept Project', 'Interaction Design'],
+      image: baseImageUrl + '/trust-handoff/thumbnail.png',
+      link: '#',
+      type: 'Case Study',
+      hasDetailedCaseStudy: true
+    },
     {
       id: 1,
       title: 'DNV & Medlaunch Accreditation',
@@ -155,6 +167,10 @@ const Projects = () => {
   
   if (showCaseStudy === 8) {
     return <SmartCitiesEnergyPrediction onBack={() => setShowCaseStudy(null)} />;
+  }
+
+  if (showCaseStudy === 9) {
+    return <TrustHandoffCaseStudy onBack={() => setShowCaseStudy(null)} />;
   }
 
   // OLD INLINE VERSION - REMOVE
