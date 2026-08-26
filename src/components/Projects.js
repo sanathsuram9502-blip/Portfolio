@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { HiExternalLink, HiEye } from 'react-icons/hi';
 import { useTheme } from '../context/ThemeContext';
+import DNVAccreditationCaseStudy from './DNVAccreditationCaseStudy';
 import LeadsProCaseStudy from './LeadsProCaseStudy';
-import DNVMedlaunchCaseStudy from './DNVMedlaunchCaseStudy';
 import BSNLCaseStudyThemed from './BSNLCaseStudyThemed';
 import UniServeReachCaseStudy from './UniServeReachCaseStudy';
 import CanaraBankCaseStudy from './canaraBankCaseStudy';
@@ -42,8 +42,8 @@ const Projects = () => {
       id: 1,
       title: 'DNV & Medlaunch Accreditation',
       category: 'ui-ux',
-      description: 'Served as a hybrid UX/UI Designer and UI Developer for a healthcare SaaS startup, navigating a 0-to-1 product cycle to launch two complex accreditation platforms. Architected a robust design system in Figma, then translated those screens into a production-ready component library using React.',
-      tags: ['Healthcare SaaS', 'Product Design Lead', 'Design System', '300+ Screens'],
+      description: 'An enterprise healthcare accreditation platform that organizes complex workflows around organization discovery, request paths, profiles, administration, and analytics — turning fragmented processes into a navigable digital system.',
+      tags: ['Information Architecture', 'Enterprise UX', 'Healthcare SaaS', 'Design System'],
       image: baseImageUrl + '/medlaunch/portfolio-mockup.png',
       link: '#',
       type: 'Case Study',
@@ -95,8 +95,8 @@ const Projects = () => {
       id: 6,
       title: 'UniServe™ Reach',
       category: 'ui-ux',
-      description: 'Comprehensive multi-channel communication analytics dashboard that unified Email, SMS, and WhatsApp performance data into a single, intuitive interface for enterprise teams.',
-      tags: ['Analytics', 'Dashboard', 'Enterprise', 'UX Design'],
+      description: 'An enterprise analytics experience that unified Email, SMS, and WhatsApp performance while creating a scalable information hierarchy for marketing and technical teams.',
+      tags: ['Information Architecture', 'Enterprise UX', 'Analytics', 'UX Research'],
       image: baseImageUrl + '/uniserve-case-study/Channel.png',
       link: '#',
       type: 'Case Study',
@@ -146,7 +146,7 @@ const Projects = () => {
   };
 
   if (showCaseStudy === 1) {
-    return <DNVMedlaunchCaseStudy onBack={() => setShowCaseStudy(null)} />;
+    return <DNVAccreditationCaseStudy onBack={() => setShowCaseStudy(null)} />;
   }
   
   if (showCaseStudy === 2) {

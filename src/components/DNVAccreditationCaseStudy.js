@@ -1,176 +1,273 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { HiArrowLeft, HiClock, HiUser, HiExternalLink, HiUsers, HiChartBar, HiDesktopComputer } from 'react-icons/hi';
+import { HiArrowLeft, HiClock, HiUser, HiDesktopComputer, HiOfficeBuilding } from 'react-icons/hi';
 import './DNVAccreditationCaseStudy.css';
 
 const DNVAccreditationCaseStudy = ({ onBack }) => {
-  // Get the base URL for images
-  const baseImageUrl = (process.env.PUBLIC_URL || '') + '/images';
-  const [ref, inView] = useInView({
+  const baseImageUrl = (process.env.PUBLIC_URL || '') + '/images/dnv-case-study';
+  const [ref] = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
 
-  const projectDetails = {
-    timeline: '8 Months',
-    role: 'Lead UI/UX Designer',
-    client: 'Medlaunch Concepts',
-    scope: '100+ Screens',
-    year: '2025'
-  };
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
 
-  const uxProcessSteps = [
+  const complexityAreas = [
     {
-      phase: 'Discovery & Research',
-      duration: '4 weeks',
-      icon: <HiUsers />,
-      activities: [
-        'Stakeholder interviews with healthcare administrators',
-        'User research with hospital quality managers',
-        'Competitive analysis of existing accreditation platforms',
-        'Domain expert consultations with DNV compliance specialists',
-        'Current workflow analysis and pain point identification'
-      ],
-      deliverables: [
-        'User personas and journey maps',
-        'Competitive analysis report',
-        'Requirements documentation',
-        'Research insights summary'
-      ]
+      number: '01',
+      title: 'Organization Discovery',
+      description: 'Find the healthcare organization the user needs before entering deeper workflows.'
     },
     {
-      phase: 'Information Architecture',
-      duration: '3 weeks',
-      icon: <HiChartBar />,
-      activities: [
-        'Content inventory and audit of 100+ screens',
-        'Card sorting exercises with healthcare professionals',
-        'Site mapping and user flow development',
-        'Navigation hierarchy optimization',
-        'Compliance workflow mapping'
-      ],
-      deliverables: [
-        'Site architecture diagrams',
-        'User flow charts',
-        'Navigation structure',
-        'Content strategy framework'
-      ]
+      number: '02',
+      title: 'New vs. Existing Paths',
+      description: 'Separate different starting conditions early so users are not exposed to irrelevant steps.'
     },
     {
-      phase: 'Design & Prototyping',
-      duration: '12 weeks',
-      icon: <HiDesktopComputer />,
-      activities: [
-        'Low-fidelity wireframing for all 100+ screens',
-        'Design system creation for healthcare compliance',
-        'High-fidelity mockup development',
-        'Interactive prototype creation',
-        'Accessibility compliance (WCAG 2.1 AA)'
-      ],
-      deliverables: [
-        'Complete wireframe library',
-        'Design system documentation',
-        'High-fidelity screen designs',
-        'Interactive prototypes',
-        'Component library'
-      ]
+      number: '03',
+      title: 'Accreditation Requests',
+      description: 'Guide users through information-heavy requests in a structured sequence.'
     },
     {
-      phase: 'Testing & Iteration',
-      duration: '4 weeks',
-      icon: <HiUsers />,
-      activities: [
-        'Usability testing with hospital staff',
-        'Compliance validation with DNV experts',
-        'Accessibility testing and validation',
-        'Performance and workflow optimization',
-        'Stakeholder feedback integration'
-      ],
-      deliverables: [
-        'Usability testing reports',
-        'Design iteration documentation',
-        'Final design specifications',
-        'Development handoff materials'
-      ]
+      number: '04',
+      title: 'Organization Profiles',
+      description: 'Keep related organization information together so users retain context.'
+    },
+    {
+      number: '05',
+      title: 'Administration',
+      description: 'Separate user-management and administrative tasks from primary accreditation workflows.'
+    },
+    {
+      number: '06',
+      title: 'Analytics & Monitoring',
+      description: 'Provide broader operational visibility without overloading transactional screens.'
     }
   ];
 
-  const keyFeatures = [
+  const journeySteps = [
+    'Enter',
+    'Choose Path',
+    'Find Organization',
+    'Submit Request',
+    'Maintain Organization',
+    'Monitor'
+  ];
+
+  const journeyDetails = [
     {
-      title: 'Compliance Dashboard',
-      description: 'Centralized view of accreditation status, pending items, and compliance metrics',
-      complexity: 'High',
-      screens: '15 screens',
-      userImpact: 'Reduced compliance oversight time by 60%'
+      step: 'STEP 1 — ENTER THE EXPERIENCE',
+      title: 'Entry & Authentication',
+      src: 'final-designs/Login-Hospital Login.png',
+      alt: 'Hospital login and authentication screen',
+      description: 'The experience begins with a focused entry point before users reach organization and accreditation workflows.'
     },
     {
-      title: 'Documentation Management',
-      description: 'Secure document upload, version control, and approval workflows',
-      complexity: 'High',
-      screens: '25 screens',
-      userImpact: 'Streamlined document processes for 500+ staff members'
+      step: 'STEP 2 — ESTABLISH THE PATH',
+      title: 'New or Existing?',
+      src: 'final-designs/New or Existing.png',
+      alt: 'New or existing accreditation path selection',
+      description: 'Rather than immediately presenting a complex accreditation form, the experience establishes whether the user is beginning a new relationship or working with an existing one. This allows subsequent information to stay relevant to the user\'s situation.'
     },
     {
-      title: 'Audit Trail System',
-      description: 'Comprehensive tracking of all changes, approvals, and compliance activities',
-      complexity: 'Medium',
-      screens: '20 screens',
-      userImpact: 'Enhanced transparency and accountability'
+      step: 'STEP 3 — FIND THE ORGANIZATION',
+      title: 'Organization Discovery',
+      src: 'final-designs/Hospital Search Result - Map View.png',
+      alt: 'Hospital search results with map view',
+      description: 'Organization search provides a dedicated discovery layer before users move into detailed organization or accreditation information. Findability becomes part of the core workflow rather than an afterthought.'
     },
     {
-      title: 'Reporting & Analytics',
-      description: 'Custom report generation and data visualization for compliance metrics',
-      complexity: 'High',
-      screens: '18 screens',
-      userImpact: 'Improved decision-making with data insights'
+      step: 'STEP 4 — BEGIN THE REQUEST',
+      title: 'Structured Request Flow',
+      src: 'final-designs/New DNV Quote Request.png',
+      alt: 'New DNV quote request form',
+      description: 'Once the user\'s context is established, the request experience can focus on the information required for that task instead of mixing discovery, organization management, and request details together.'
     },
     {
+      step: 'STEP 5 — MAINTAIN CONTEXT',
+      title: 'Organization Profile',
+      src: 'final-designs/Hospital Profile - Organization Information.png',
+      secondarySrc: 'final-designs/Hospital Profile - Organization Information2.png',
+      alt: 'Hospital organization profile information',
+      secondaryAlt: 'Additional organization profile information view',
+      description: 'The organization profile acts as a persistent context for information associated with a healthcare institution, making it easier to understand which entity the user is working with as they move through related tasks.'
+    },
+    {
+      step: 'STEP 6 — MONITOR',
+      title: 'Operational Visibility',
+      src: 'final-designs/Initial Page.png',
+      secondarySrc: 'final-designs/analysis.png',
+      alt: 'Initial operational dashboard',
+      secondaryAlt: 'Analytics and monitoring dashboard',
+      description: 'Dashboard and analytical views provide broader visibility while remaining separate from task-focused accreditation workflows.'
+    }
+  ];
+
+  const findabilityPrinciples = [
+    {
+      title: 'Search Before Navigation',
+      description: 'Allow users to locate a known organization directly instead of forcing them through deep navigation.'
+    },
+    {
+      title: 'Context With Results',
+      description: 'Give users enough identifying information to distinguish between organizations with similar names.'
+    },
+    {
+      title: 'Discovery → Detail',
+      description: 'Once the correct organization is identified, transition into the organization profile where related information can stay grouped.'
+    }
+  ];
+
+  const designExploration = [
+    {
+      number: '01',
+      title: 'Entry & Orientation',
+      question: 'How much context does a user need before choosing where to go?',
+      explanation: 'The entry experience needed to orient users without immediately exposing the full complexity of accreditation workflows.'
+    },
+    {
+      number: '02',
+      title: 'Path Selection',
+      question: 'When should the system determine whether the user is new or returning?',
+      explanation: 'Separating new and existing paths early helped keep later steps relevant to the user\'s situation.'
+    },
+    {
+      number: '03',
+      title: 'Request Structure',
+      question: 'How should an information-heavy accreditation request be organized?',
+      explanation: 'The request experience needed a clear hierarchy so users could focus on the information required for the current task rather than process unrelated information at the same time.'
+    },
+    {
+      number: '04',
+      title: 'Organization Context',
+      question: 'What information should stay together once a healthcare organization is selected?',
+      explanation: 'Organization profiles became the persistent context for related information so users could understand which entity they were working with across connected tasks.'
+    },
+    {
+      number: '05',
+      title: 'Findability',
+      question: 'How can users locate the correct healthcare organization efficiently?',
+      explanation: 'Organization discovery was treated as a dedicated workflow rather than forcing users to navigate through multiple sections before reaching the entity they needed.'
+    },
+    {
+      number: '06',
+      title: 'Monitoring vs. Task Work',
+      question: 'What belongs in analytics and monitoring views versus transactional workflows?',
+      explanation: 'Operational monitoring was kept separate from task-focused accreditation screens so users could scan broader activity without adding unnecessary complexity to active workflows.'
+    }
+  ];
+
+  const designSystemItems = [
+    {
+      src: 'design-system/Color Palette.png',
+      title: 'Color Palette',
+      description: 'Consistent visual language across the platform.',
+      alt: 'Design system color palette'
+    },
+    {
+      src: 'design-system/Typography.png',
+      title: 'Typography',
+      description: 'Clear hierarchy for dense enterprise information.',
+      alt: 'Design system typography'
+    },
+    {
+      src: 'design-system/Button.png',
+      title: 'Buttons',
+      description: 'Reusable action patterns and interaction states.',
+      alt: 'Design system button components'
+    },
+    {
+      src: 'design-system/Action.png',
+      title: 'Actions',
+      description: 'Consistent treatment of repeated workflow actions.',
+      alt: 'Design system action components'
+    },
+    {
+      src: 'design-system/Label.png',
+      title: 'Labels',
+      description: 'Clear, reusable labeling patterns for information-heavy interfaces.',
+      alt: 'Design system label components'
+    }
+  ];
+
+  const finalExperience = [
+    {
+      src: 'final-designs/Initial Page.png',
+      title: 'Operational Home',
+      description: 'A high-level entry view for monitoring activity without entering a specific accreditation task.',
+      alt: 'Initial operational page'
+    },
+    {
+      src: 'final-designs/New or Existing.png',
+      title: 'Path Selection',
+      description: 'Establishes the user\'s starting condition before deeper workflows begin.',
+      alt: 'New or existing path selection'
+    },
+    {
+      src: 'final-designs/New DNV Quote Request.png',
+      title: 'Accreditation Request',
+      description: 'A structured request flow focused on the information needed for that task.',
+      alt: 'New DNV quote request screen'
+    },
+    {
+      src: 'final-designs/Hospital Search Result - Map View.png',
+      title: 'Organization Search',
+      description: 'A dedicated discovery layer for locating the correct healthcare organization.',
+      alt: 'Hospital search map results'
+    },
+    {
+      src: 'final-designs/Hospital Profile - Organization Information.png',
+      title: 'Organization Profile',
+      description: 'Keeps related organization information together so users retain context.',
+      alt: 'Hospital organization profile'
+    },
+    {
+      src: 'final-designs/User Management.png',
       title: 'User Management',
-      description: 'Role-based access control and permission management system',
-      complexity: 'Medium',
-      screens: '12 screens',
-      userImpact: 'Secure and organized user access'
+      description: 'Administrative access management kept separate from primary accreditation workflows.',
+      alt: 'User management screen'
     },
     {
-      title: 'Notification Center',
-      description: 'Smart alerts and reminders for compliance deadlines and tasks',
-      complexity: 'Medium',
-      screens: '10 screens',
-      userImpact: 'Zero missed compliance deadlines'
+      src: 'final-designs/analysis.png',
+      title: 'Analytics',
+      description: 'Broader operational visibility presented separately from transactional screens.',
+      alt: 'Analytics dashboard'
     }
   ];
 
   const designChallenges = [
     {
       number: '01',
-      title: 'No Design System',
-      challenge: 'When I first joined the company, they only had a design guideline written in a doc',
-      solution: 'I built and maintained the design system, which serves 300+ screens to make a cohesive visual.',
+      title: 'No Established Design System',
+      challenge: 'The product began with design guidance but without a mature reusable component system.',
+      solution: 'I established reusable components and patterns so new workflows could be designed and implemented more consistently.',
       icon: '📄',
       solutionIcon: '🎨'
     },
     {
       number: '02',
-      title: 'Conflicting Ideas',
-      challenge: 'There were times when the PM and I had different ideas, and it wasn\'t clear which direction was better',
-      solution: 'I conducted competitive research, then discussed with PM to figure out the best decision.',
+      title: 'Different Product Directions',
+      challenge: 'The PM and I sometimes had different ideas about how a workflow or layout should work.',
+      solution: 'I explored alternatives, reviewed relevant product patterns, and used prototypes to make the tradeoffs easier to evaluate together.',
       icon: '💭',
       solutionIcon: '💡'
     },
     {
       number: '03',
-      title: 'Layout Uncertainty',
-      challenge: 'Sometimes I wasn\'t sure which page layout would work better.',
-      solution: 'I usually designed 2–3 variations and then asked colleagues for feedback.',
+      title: 'Ambiguous Layout Decisions',
+      challenge: 'Some information-heavy screens did not have an obvious layout solution.',
+      solution: 'I created multiple variations and compared how each option affected hierarchy, task flow, and implementation before selecting a direction.',
       icon: '❓',
       solutionIcon: '💬'
     },
     {
       number: '04',
-      title: 'Inconsistent Quality',
-      challenge: 'At first, since there was no QA team, the design quality wasn\'t consistent.',
-      solution: 'I took the initiative to review the outcomes and created a fix checklist for developers.',
+      title: 'Limited Design QA Coverage',
+      challenge: 'Early implementation did not have dedicated design QA coverage, creating inconsistencies between intended and implemented UI.',
+      solution: 'I reviewed implemented screens and created a design QA checklist so issues could be communicated clearly to engineering.',
       icon: '⚠️',
       solutionIcon: '✅'
     }
@@ -179,570 +276,396 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
   return (
     <div className="dnv-case-study" ref={ref}>
       <div className="container">
-        {/* Header */}
         <motion.div
           className="case-study-header"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <button className="back-button" onClick={onBack}>
+          <button className="back-button" onClick={onBack} type="button">
             <HiArrowLeft />
             Back to Projects
           </button>
-          
+
           <div className="case-study-hero">
-            <h1>DNV Accreditation Portal</h1>
+            <h1>Digitalizing a Complex Healthcare Accreditation Journey</h1>
             <p className="hero-subtitle">
-              A comprehensive hospital accreditation platform designed for healthcare quality management, 
-              compliance tracking, and certification workflows. This enterprise-scale solution encompasses 
-              100+ screens serving multiple user roles in the healthcare compliance ecosystem.
+              Designing a scalable healthcare SaaS experience that transforms fragmented accreditation
+              workflows into a structured digital system for healthcare institutions and accreditation teams.
             </p>
-            
+            <p className="hero-support">
+              Designed as part of Medlaunch Concepts' healthcare accreditation platform work.
+            </p>
+
             <div className="project-meta">
               <div className="meta-item">
-                <HiClock />
-                <span>Timeline: {projectDetails.timeline}</span>
+                <HiUser />
+                <span>Role: Product Design Lead / UX/UI Designer</span>
               </div>
               <div className="meta-item">
-                <HiUser />
-                <span>Role: {projectDetails.role}</span>
+                <HiOfficeBuilding />
+                <span>Client / Product: Medlaunch Concepts — Healthcare Accreditation SaaS</span>
               </div>
               <div className="meta-item">
                 <HiDesktopComputer />
-                <span>Scope: {projectDetails.scope}</span>
+                <span>Scope: End-to-end product design</span>
+              </div>
+              <div className="meta-item">
+                <HiClock />
+                <span>Timeline: 8 Months</span>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Project Overview */}
+        {/* 01 Overview */}
         <motion.section
           className="case-study-section"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h2>Project Overview</h2>
+          <h2>01 Overview</h2>
+          <p className="section-intro">
+            Healthcare accreditation is not a single task. It involves organizations, applications,
+            documentation, reviews, approvals, user access, and ongoing accreditation management.
+            When those activities are handled across disconnected processes, users have to understand
+            not only accreditation requirements but also where information lives and what they need
+            to do next.
+          </p>
+          <p className="section-intro">
+            My role was to help translate that operational complexity into a structured digital
+            experience. Instead of treating the product as a collection of independent forms and
+            screens, I approached it as a connected system of organizations, workflows, information,
+            and user actions.
+          </p>
           <div className="overview-grid">
-            <div className="overview-card">
-              <h3>The Challenge</h3>
+            <div className="overview-card overview-card-problem">
+              <h3>The Problem</h3>
               <p>
-                Healthcare organizations struggle with complex accreditation processes involving hundreds of 
-                compliance requirements, multiple stakeholders, and extensive documentation. The existing 
-                manual processes were time-consuming, error-prone, and difficult to track.
+                Accreditation-related information and tasks were spread across complex workflows involving
+                multiple entities, documents, decisions, and user roles. The experience needed to make those
+                relationships easier to understand and manage.
               </p>
             </div>
-            <div className="overview-card">
-              <h3>The Solution</h3>
+            <div className="overview-card overview-card-goal">
+              <h3>The Product Goal</h3>
               <p>
-                A comprehensive digital platform that streamlines the entire accreditation lifecycle, 
-                from initial assessment to final certification, with intelligent workflows, automated 
-                reminders, and real-time compliance tracking.
-              </p>
-            </div>
-            <div className="overview-card">
-              <h3>The Impact</h3>
-              <p>
-                Reduced accreditation preparation time by 70%, improved compliance accuracy by 85%, 
-                and enabled seamless collaboration across hospital departments and external auditors.
+                Create a scalable digital environment where healthcare organizations and accreditation
+                teams could find organizations, begin the appropriate accreditation path, manage organization
+                information, complete requests, and return to ongoing operational information.
               </p>
             </div>
           </div>
         </motion.section>
 
-        {/* UX Design Process */}
+        {/* 02 Complexity */}
         <motion.section
           className="case-study-section"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <h2>UX Design Process</h2>
-          <p className="process-intro">
-            Given the complexity of healthcare compliance and the scale of 100+ screens, I followed a 
-            comprehensive UX design process focused on user research, iterative design, and continuous validation.
+          <h2>02 Making Sense of the Complexity</h2>
+          <p className="section-intro">
+            One of the main UX challenges was that accreditation does not follow a single screen-to-screen
+            journey. Users may enter the system with different intentions: identifying an organization,
+            starting a new request, returning to an existing organization, managing users, reviewing
+            information, or monitoring activity.
           </p>
-          
-          <div className="process-timeline">
-            {uxProcessSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                className="process-step"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-              >
-                <div className="step-header">
-                  <div className="step-icon">{step.icon}</div>
-                  <div className="step-info">
-                    <h3>{step.phase}</h3>
-                    <span className="step-duration">{step.duration}</span>
-                  </div>
-                </div>
-                
-                <div className="step-content">
-                  <div className="activities">
-                    <h4>Key Activities</h4>
-                    <ul>
-                      {step.activities.map((activity, actIndex) => (
-                        <li key={actIndex}>{activity}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="deliverables">
-                    <h4>Deliverables</h4>
-                    <ul>
-                      {step.deliverables.map((deliverable, delIndex) => (
-                        <li key={delIndex}>{deliverable}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </motion.div>
+          <div className="dnv-feature-grid">
+            {complexityAreas.map((area) => (
+              <div key={area.number} className="dnv-feature-card">
+                <div className="dnv-feature-number">{area.number}</div>
+                <h3>{area.title}</h3>
+                <p>{area.description}</p>
+              </div>
             ))}
           </div>
         </motion.section>
 
-        {/* Design & Prototyping */}
+        {/* 03 Information Architecture */}
         <motion.section
           className="case-study-section"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h2>Design & Prototyping</h2>
+          <h2>03 Information Architecture</h2>
           <p className="section-intro">
-            Starting with low-fidelity wireframes, I mapped out the complex user flows and information architecture 
-            for all 100+ screens. These wireframes helped stakeholders visualize the structure and validate the 
-            user experience before moving to high-fidelity designs.
+            The IA problem was not simply deciding where individual pages belonged. I needed to make
+            relationships between organizations, accreditation activities, users, documents, and
+            operational information understandable within one product.
           </p>
-          
-          <div className="wireframes-grid">
-            <motion.div
-              className="wireframe-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            >
-              <div className="wireframe-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_healthcare_homepage.png'} 
-                  alt="DNV Healthcare Homepage Wireframe"
-                />
-              </div>
-              <div className="wireframe-details">
-                <h4>Homepage & Navigation</h4>
-                <p>Main entry point with clear navigation structure and role-based access controls</p>
-              </div>
-            </motion.div>
+          <p className="section-intro">
+            That led me to organize the experience around what users were trying to accomplish rather
+            than exposing the internal structure of the system.
+          </p>
 
-            <motion.div
-              className="wireframe-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              <div className="wireframe-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_quote_request_form.png'} 
-                  alt="Quote Request Form Wireframe"
-                />
+          <h3 className="dnv-subsection-label">Simplified information architecture</h3>
+          <div className="ia-diagram" aria-label="Simplified information architecture diagram">
+            <div className="ia-root">DNV Accreditation Platform</div>
+            <div className="ia-connector" aria-hidden="true" />
+            <div className="ia-branches">
+              <div className="ia-branch">
+                <div className="ia-node ia-node-primary">Organization</div>
+                <div className="ia-leaf">Search / Map</div>
+                <div className="ia-leaf">Org Profile</div>
+                <div className="ia-leaf">Org Information</div>
               </div>
-              <div className="wireframe-details">
-                <h4>Quote Request Flow</h4>
-                <p>Complex multi-step form with smart field validation and progressive disclosure</p>
+              <div className="ia-branch">
+                <div className="ia-node ia-node-primary">Accreditation</div>
+                <div className="ia-leaf">New / Existing</div>
+                <div className="ia-leaf">Quote / Request</div>
+                <div className="ia-leaf">Workflow Details</div>
               </div>
-            </motion.div>
+              <div className="ia-branch">
+                <div className="ia-node ia-node-primary">Administration</div>
+                <div className="ia-leaf">User Mgmt</div>
+              </div>
+              <div className="ia-branch">
+                <div className="ia-node ia-node-primary">Analytics</div>
+                <div className="ia-leaf">Monitoring</div>
+              </div>
+            </div>
+          </div>
+          <p className="ia-caption">
+            This simplified portfolio view shows how the major experience areas relate. It is not
+            intended to reproduce every business rule or accreditation requirement.
+          </p>
 
-            <motion.div
-              className="wireframe-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.7 }}
-            >
-              <div className="wireframe-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_hospital_profile.png'} 
-                  alt="Hospital Profile Wireframe"
-                />
-              </div>
-              <div className="wireframe-details">
-                <h4>Organization Profile</h4>
-                <p>Comprehensive hospital information management with document handling</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="wireframe-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
-              <div className="wireframe-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/wireframes/wireframe_dnv_hospital_lookup_map.png'} 
-                  alt="Hospital Lookup Map Wireframe"
-                />
-              </div>
-              <div className="wireframe-details">
-                <h4>Hospital Lookup & Mapping</h4>
-                <p>Interactive map interface for finding and managing hospital locations</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="wireframe-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.9 }}
-            >
-              <div className="wireframe-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/wireframes/wireframe_clara_ai_assistant.png'} 
-                  alt="Clara AI Assistant Wireframe"
-                />
-              </div>
-              <div className="wireframe-details">
-                <h4>AI Assistant Integration</h4>
-                <p>Clara AI helper for guiding users through complex compliance processes</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="wireframe-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 1.0 }}
-            >
-              <div className="wireframe-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/wireframes/image.png'} 
-                  alt="Additional Wireframe"
-                />
-              </div>
-              <div className="wireframe-details">
-                <h4>Dashboard Analytics</h4>
-                <p>Data visualization and reporting interface for compliance metrics</p>
-              </div>
-            </motion.div>
+          <div className="ia-principle-card">
+            <h3>Orient users before asking them to act</h3>
+            <p>
+              A recurring design principle was establishing context before exposing complexity. Before
+              asking users for detailed accreditation information, the experience first helps them identify
+              the organization and the path they are working with. That influenced the separation between
+              organization discovery, new/existing selection, organization profiles, and deeper request
+              workflows.
+            </p>
           </div>
         </motion.section>
 
-        {/* Design System */}
+        {/* 04 Core Journey */}
         <motion.section
           className="case-study-section"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <h2>Design System</h2>
+          <h2>04 Designing the Core Journey</h2>
           <p className="section-intro">
-            To ensure consistency across 100+ screens and enable efficient development, I created a comprehensive 
-            design system tailored for healthcare compliance interfaces. The system prioritizes accessibility, 
-            clarity, and trust-building elements essential for medical environments.
+            The product was designed as a connected journey rather than a set of isolated screens.
+            Establishing path and organization context early made later request and profile screens easier to reason about.
           </p>
-          
-          <div className="design-system-grid">
-            <motion.div
-              className="design-system-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              <div className="design-system-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/design-system/Color Palette.png'} 
-                  alt="Color Palette Design System"
-                />
-              </div>
-              <div className="design-system-details">
-                <h4>Color Palette</h4>
-                <p>Healthcare-focused color scheme ensuring WCAG 2.1 AA compliance and professional trust</p>
-              </div>
-            </motion.div>
 
-            <motion.div
-              className="design-system-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.7 }}
-            >
-              <div className="design-system-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/design-system/Typography.png'} 
-                  alt="Typography Design System"
-                />
-              </div>
-              <div className="design-system-details">
-                <h4>Typography System</h4>
-                <p>Clear hierarchy and readable fonts optimized for complex medical documentation</p>
-              </div>
-            </motion.div>
+          <div className="journey-indicator" aria-label="Core user journey steps">
+            {journeySteps.map((step, index) => (
+              <React.Fragment key={step}>
+                <div className="journey-pill">{step}</div>
+                {index < journeySteps.length - 1 && (
+                  <div className="journey-arrow" aria-hidden="true">→</div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
 
-            <motion.div
-              className="design-system-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
-              <div className="design-system-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/design-system/Button.png'} 
-                  alt="Button Component System"
-                />
+          <div className="journey-steps">
+            {journeyDetails.map((item) => (
+              <div key={item.step} className="journey-step-block">
+                <div className="journey-step-label">{item.step}</div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <div className={`journey-image-grid ${item.secondarySrc ? 'has-secondary' : ''}`}>
+                  <div className="final-design-image">
+                    <img src={`${baseImageUrl}/${item.src}`} alt={item.alt} />
+                  </div>
+                  {item.secondarySrc && (
+                    <div className="final-design-image">
+                      <img src={`${baseImageUrl}/${item.secondarySrc}`} alt={item.secondaryAlt} />
+                    </div>
+                  )}
+                </div>
               </div>
-              <div className="design-system-details">
-                <h4>Button Components</h4>
-                <p>Comprehensive button library with states, sizes, and contextual variations</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="design-system-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.9 }}
-            >
-              <div className="design-system-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/design-system/Action.png'} 
-                  alt="Action Components"
-                />
-              </div>
-              <div className="design-system-details">
-                <h4>Action Components</h4>
-                <p>Interactive elements and controls for complex workflow management</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="design-system-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 1.0 }}
-            >
-              {/* <div className="design-system-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/design-system/Label.png'} 
-                  alt="Label System"
-                />
-              </div> */}
-              <div className="design-system-details">
-                <h4>Label System</h4>
-                <p>Consistent labeling and form elements for clear user guidance</p>
-              </div>
-            </motion.div>
+            ))}
           </div>
         </motion.section>
 
-        {/* Final Designs */}
+        {/* 05 Findability */}
         <motion.section
           className="case-study-section"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.55 }}
+        >
+          <h2>05 Findability & Organization Discovery</h2>
+          <p className="section-intro">
+            In a platform containing many healthcare organizations, findability becomes part of the
+            core workflow. Users should not have to navigate through multiple layers simply to locate
+            the organization they need.
+          </p>
+          <p className="section-intro">
+            The hospital search experience creates a dedicated discovery layer where users can identify
+            the correct organization before moving into detailed accreditation information.
+          </p>
+
+          <div className="findability-media">
+            <div className="final-design-image">
+              <img
+                src={`${baseImageUrl}/final-designs/Hospital Search Result - Map View.png`}
+                alt="Hospital search result map view"
+              />
+            </div>
+            <div className="final-design-image">
+              <img
+                src={`${baseImageUrl}/wireframes/wireframe_dnv_hospital_lookup_map.png`}
+                alt="Hospital lookup map wireframe"
+              />
+            </div>
+          </div>
+
+          <div className="dnv-feature-grid">
+            {findabilityPrinciples.map((principle) => (
+              <div key={principle.title} className="dnv-feature-card">
+                <h3>{principle.title}</h3>
+                <p>{principle.description}</p>
+              </div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* 06 Design Exploration */}
+        <motion.section
+          className="case-study-section"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <h2>Final Designs</h2>
+          <h2>06 Design Exploration & Decision Making</h2>
           <p className="section-intro">
-            The final high-fidelity designs showcase the complete user experience, from initial login through 
-            complex compliance workflows. Each screen demonstrates the design system in action while solving 
-            specific user needs in the healthcare accreditation process.
+            Before moving into final interface design, I worked through the structural questions behind
+            the major workflows. The focus was less on visual styling and more on deciding what users
+            needed to understand at each point, what information belonged together, and when deeper
+            complexity should become visible.
           </p>
-          
-          <div className="final-designs-grid">
-            <motion.div
-              className="final-design-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.7 }}
-            >
-              <div className="final-design-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/final-designs/Login-Hospital Login.png'} 
-                  alt="Hospital Login Interface"
-                />
-              </div>
-              <div className="final-design-details">
-                <h4>Authentication Portal</h4>
-                <p>Secure login interface with role-based access and seamless integration options</p>
-                <div className="design-features">
-                  <span className="feature-tag">Multi-factor Auth</span>
-                  <span className="feature-tag">Role Selection</span>
-                  <span className="feature-tag">SSO Integration</span>
-                </div>
-              </div>
-            </motion.div>
 
-            <motion.div
-              className="final-design-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
-              <div className="final-design-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/final-designs/New DNV Quote Request.png'} 
-                  alt="DNV Quote Request Interface"
-                />
-              </div>
-              <div className="final-design-details">
-                <h4>Quote Request Form</h4>
-                <p>Streamlined multi-step form with intelligent validation and progress tracking</p>
-                <div className="design-features">
-                  <span className="feature-tag">Smart Validation</span>
-                  <span className="feature-tag">Progress Tracking</span>
-                  <span className="feature-tag">Auto-save</span>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="final-design-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.9 }}
-            >
-              <div className="final-design-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/final-designs/New or Existing.png'} 
-                  alt="User Path Selection Interface"
-                />
-              </div>
-              <div className="final-design-details">
-                <h4>User Journey Selection</h4>
-                <p>Clear onboarding flow separating new and existing users for optimized experiences</p>
-                <div className="design-features">
-                  <span className="feature-tag">Clear CTAs</span>
-                  <span className="feature-tag">User Guidance</span>
-                  <span className="feature-tag">Path Optimization</span>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="final-design-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 1.0 }}
-            >
-              <div className="final-design-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/final-designs/Initial Page.png'} 
-                  alt="Dashboard Initial Page"
-                />
-              </div>
-              <div className="final-design-details">
-                <h4>Dashboard Overview</h4>
-                <p>Comprehensive dashboard providing at-a-glance compliance status and key metrics</p>
-                <div className="design-features">
-                  <span className="feature-tag">Real-time Data</span>
-                  <span className="feature-tag">Status Tracking</span>
-                  <span className="feature-tag">Quick Actions</span>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="final-design-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 1.1 }}
-            >
-              <div className="final-design-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/final-designs/Hospital Profile - Organization Information.png'} 
-                  alt="Hospital Organization Profile"
-                />
-              </div>
-              <div className="final-design-details">
-                <h4>Organization Management</h4>
-                <p>Detailed hospital profile management with document handling and compliance tracking</p>
-                <div className="design-features">
-                  <span className="feature-tag">Document Upload</span>
-                  <span className="feature-tag">Version Control</span>
-                  <span className="feature-tag">Compliance Status</span>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="final-design-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 1.2 }}
-            >
-              <div className="final-design-image">
-                <img 
-                  src={baseImageUrl + '/dnv-case-study/final-designs/analysis.png'} 
-                  alt="Analytics and Reporting Interface"
-                />
-              </div>
-              <div className="final-design-details">
-                <h4>Analytics & Reporting</h4>
-                <p>Advanced analytics dashboard with custom reporting and data visualization tools</p>
-                <div className="design-features">
-                  <span className="feature-tag">Data Visualization</span>
-                  <span className="feature-tag">Custom Reports</span>
-                  <span className="feature-tag">Export Tools</span>
-                </div>
-              </div>
-            </motion.div>
+          <div className="dnv-feature-grid">
+            {designExploration.map((item, index) => (
+              <motion.div
+                key={item.number}
+                className="dnv-feature-card"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.65 + index * 0.05 }}
+              >
+                <div className="dnv-feature-number">{item.number}</div>
+                <h3>{item.title}</h3>
+                <p className="design-decision-question">{item.question}</p>
+                <p>{item.explanation}</p>
+              </motion.div>
+            ))}
           </div>
         </motion.section>
 
-        {/* Key Features */}
+        {/* 07 Design System */}
         <motion.section
           className="case-study-section"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.7 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.65 }}
         >
-          <h2>Key Features & Modules</h2>
-          <div className="features-grid">
-            {keyFeatures.map((feature, index) => (
+          <h2>07 Design System at Scale</h2>
+          <p className="section-intro">
+            As the product grew, consistency became more than a visual concern. Repeating the same
+            patterns across many workflows without a shared system would make both the user experience
+            and implementation increasingly difficult to maintain.
+          </p>
+          <p className="section-intro">
+            I created and maintained reusable visual and interaction patterns so hierarchy, actions,
+            labels, typography, and common controls behaved consistently across the product.
+            The design system ultimately supported 300+ screens across the broader accreditation
+            product work.
+          </p>
+
+          <div className="design-system-grid">
+            {designSystemItems.map((item, index) => (
               <motion.div
-                key={index}
-                className="feature-card"
+                key={item.src}
+                className="design-system-item"
                 initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 + index * 0.05 }}
               >
-                <div className="feature-header">
-                  <h3>{feature.title}</h3>
-                  <div className="feature-meta">
-                    <span className={`complexity ${feature.complexity.toLowerCase()}`}>
-                      {feature.complexity} Complexity
-                    </span>
-                    <span className="screen-count">{feature.screens}</span>
-                  </div>
+                <div className="design-system-image">
+                  <img src={`${baseImageUrl}/${item.src}`} alt={item.alt} />
                 </div>
-                <p className="feature-description">{feature.description}</p>
-                <div className="feature-impact">
-                  <strong>Impact:</strong> {feature.userImpact}
+                <div className="design-system-details">
+                  <h4>{item.title}</h4>
+                  <p>{item.description}</p>
                 </div>
               </motion.div>
             ))}
           </div>
         </motion.section>
 
-        {/* Design Challenges */}
+        {/* 08 Final Experience */}
+        <motion.section
+          className="case-study-section"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+        >
+          <h2>08 Final Experience</h2>
+          <p className="section-intro">
+            The final experience brings the architecture together: users can enter, establish their path,
+            locate an organization, complete a request, maintain organization context, and return to
+            operational monitoring without treating each of those as a separate product.
+          </p>
+
+          {/* <div className="final-design-image mockup-feature">
+            <img
+              src={`${baseImageUrl}/final-designs/mockup.png`}
+              alt="DNV accreditation platform product mockup"
+            />
+          </div> */}
+
+          <div className="final-designs-grid">
+            {finalExperience.map((item, index) => (
+              <motion.div
+                key={item.src}
+                className="final-design-item"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.75 + index * 0.05 }}
+              >
+                <div className="final-design-image">
+                  <img src={`${baseImageUrl}/${item.src}`} alt={item.alt} />
+                </div>
+                <div className="final-design-details">
+                  <h4>{item.title}</h4>
+                  <p>{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* 09 Challenges */}
         <motion.section
           className="case-study-section challenges-solutions-section"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.75 }}
         >
-          <h2>04 Challenges & Solutions</h2>
+          <h2>09 Working Through Product Constraints</h2>
           <div className="challenges-grid">
             {designChallenges.map((item, index) => (
               <motion.div
-                key={index}
+                key={item.number}
                 className="challenge-solution-pair"
                 initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + index * 0.08 }}
               >
                 <div className="challenge-side">
                   <div className="challenge-header">
@@ -756,14 +679,14 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
                 </div>
 
                 <div className="arrow-separator">
-                  <svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 12H58M58 12L48 2M58 12L48 22" stroke="var(--accent-primary)" strokeWidth="2"/>
+                  <svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M0 12H58M58 12L48 2M58 12L48 22" stroke="var(--accent-primary)" strokeWidth="2" />
                   </svg>
                 </div>
 
                 <div className="solution-side">
                   <div className="solution-header">
-                    <span className="solution-number">Solution {item.number}</span>
+                    <span className="solution-number">Response {item.number}</span>
                   </div>
                   <div className="solution-content">
                     <div className="solution-icon">{item.solutionIcon}</div>
@@ -775,60 +698,55 @@ const DNVAccreditationCaseStudy = ({ onBack }) => {
           </div>
         </motion.section>
 
-        {/* Results */}
+        {/* 10 Outcome & Reflection */}
         <motion.section
           className="case-study-section"
           initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.85 }}
         >
-          <h2>Results & Impact</h2>
-          <div className="results-container">
-            <div className="results-grid">
-              <div className="result-card">
-                <div className="result-number">70%</div>
-                <div className="result-label">Reduction in accreditation prep time</div>
-              </div>
-              <div className="result-card">
-                <div className="result-number">85%</div>
-                <div className="result-label">Improvement in compliance accuracy</div>
-              </div>
-              <div className="result-card">
-                <div className="result-number">95%</div>
-                <div className="result-label">User adoption rate within 3 months</div>
-              </div>
-              <div className="result-card">
-                <div className="result-number">60%</div>
-                <div className="result-label">Reduction in oversight time</div>
-              </div>
-            </div>
-            
-            <div className="testimonial">
-              <blockquote>
-                "The DNV Accreditation Portal has transformed how we manage compliance. What used to take 
-                months now takes weeks, and our staff feels confident navigating the complex requirements."
-              </blockquote>
-              <cite>— Chief Quality Officer, Partner Hospital</cite>
-            </div>
+          <h2>10 Outcome & Reflection</h2>
+          <div className="dnv-outcome-card">
+            <h3>Outcome</h3>
+            <p>
+              The project transformed a complex accreditation concept into a cohesive digital product
+              spanning organization discovery, request workflows, organization profiles, administration,
+              and analytics.
+            </p>
+            <p>
+              The work helped Medlaunch demonstrate the viability of the product, strengthen the DNV
+              relationship, and contributed to the company's broader ability to secure funding and grow
+              the team.
+            </p>
+
+            <h3>What I Learned</h3>
+            <p>
+              The biggest lesson from this project was that complex enterprise UX is often an
+              information-organization problem before it becomes a screen-design problem. Once the
+              relationships between organizations, tasks, users, and information were clearer, individual
+              interface decisions became easier to reason about.
+            </p>
+
+            <h3>What I Would Validate Next</h3>
+            <p>
+              As the product evolves, I would continue validating whether users can quickly understand
+              where they are in the accreditation lifecycle, locate the correct organization or information,
+              and move between related tasks without losing context.
+            </p>
           </div>
         </motion.section>
 
-        {/* CTA */}
-        <motion.div
-          className="case-study-cta"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+        <motion.button
+          className="back-button back-button-bottom"
+          onClick={onBack}
+          type="button"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
         >
-          <div className="cta-content">
-            <h3>Ready to transform your healthcare workflow?</h3>
-            <p>Let's discuss how thoughtful UX design can simplify complex compliance processes.</p>
-            <a href="#contact" className="btn-primary">
-              Start a Conversation
-              <HiExternalLink />
-            </a>
-          </div>
-        </motion.div>
+          <HiArrowLeft />
+          Back to Projects
+        </motion.button>
       </div>
     </div>
   );
